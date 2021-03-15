@@ -10,10 +10,107 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_15_131836) do
+ActiveRecord::Schema.define(version: 2021_03_15_140858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.string "service_name", null: false
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "active_storage_variant_records", force: :cascade do |t|
+    t.bigint "blob_id", null: false
+    t.string "variation_digest", null: false
+    t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "brands", force: :cascade do |t|
+    t.string "name"
+    t.integer "rating"
+    t.integer "planet_rating"
+    t.integer "people_rating"
+    t.integer "animals_rating"
+    t.text "planet_description"
+    t.text "people_description"
+    t.text "animals_description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "fabrics", force: :cascade do |t|
+    t.text "description"
+    t.string "name"
+    t.integer "rating"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "garderobe_items", force: :cascade do |t|
+    t.bigint "product_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["product_id"], name: "index_garderobe_items_on_product_id"
+    t.index ["user_id"], name: "index_garderobe_items_on_user_id"
+  end
+
+  create_table "product_suppliers", force: :cascade do |t|
+    t.bigint "supplier_id", null: false
+    t.bigint "product_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["product_id"], name: "index_product_suppliers_on_product_id"
+    t.index ["supplier_id"], name: "index_product_suppliers_on_supplier_id"
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.bigint "brand_id", null: false
+    t.text "photo_url"
+    t.string "category"
+    t.string "article_number"
+    t.string "department"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["brand_id"], name: "index_products_on_brand_id"
+  end
+
+  create_table "suppliers", force: :cascade do |t|
+    t.string "name"
+    t.text "address"
+    t.string "country"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "used_materials", force: :cascade do |t|
+    t.integer "percentage"
+    t.bigint "fabric_id", null: false
+    t.bigint "product_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["fabric_id"], name: "index_used_materials_on_fabric_id"
+    t.index ["product_id"], name: "index_used_materials_on_product_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -23,8 +120,21 @@ ActiveRecord::Schema.define(version: 2021_03_15_131836) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.date "birthday"
+    t.string "gender"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "garderobe_items", "products"
+  add_foreign_key "garderobe_items", "users"
+  add_foreign_key "product_suppliers", "products"
+  add_foreign_key "product_suppliers", "suppliers"
+  add_foreign_key "products", "brands"
+  add_foreign_key "used_materials", "fabrics"
+  add_foreign_key "used_materials", "products"
 end
