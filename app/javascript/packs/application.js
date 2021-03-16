@@ -20,7 +20,7 @@ ActiveStorage.start()
 
 // External imports
 import "bootstrap";
-import { BrowserBarcodeReader } from '@zxing/library';
+import { BrowserMultiFormatReader } from '@zxing/library';
 import { startScanner } from '../plugins/scan'
 
 // Internal imports, e.g:

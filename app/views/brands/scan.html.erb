@@ -1,9 +1,14 @@
 <div class="scan-container">
-  <video class="video-wrapper" id="video" width="300" height="300"></video>
-
-
-  <div class="scan-button-container">
-    <a class="btn btn-primary" data-brand-id= "<%= @brand_id %>" id="startButton">Scan</a>
-    <a class="btn btn-danger" id="resetButton">Reset</a>
+  <div class="scan-title">
+    <h2>Scan your article</h2>
+  </div>
+  <div class="scanner-container">
+    <video class="video-wrapper" id="video" width="300" height="300"></video>
+    <div class="scan-button-container">
+      <a  data-brand-id= "<%= @brand_id %>" id="startButton">
+        <%= render 'components/barcode_icon' %>
+      </a>
+      <a class="garma-btn-secondary scan-hide" style="margin-top: 20px" id="resetButton">Stop</a>
+    </div>
   </div>
 </div>

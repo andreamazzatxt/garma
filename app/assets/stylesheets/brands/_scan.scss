@@ -2,12 +2,37 @@
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-flow: column wrap;
+  flex-flow: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.scanner-container {
+  height: 600px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
 }
 
 .video-wrapper {
   border: solid 3px $text-color;
   border-radius: 10px;
+  margin-bottom: 100px;
+}
+
+.scan-button-container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 50%;
+}
+
+.scan-hide {
+  display: none;
+}
+
+.scan-title {
+  padding: 45px 50px;
+  align-self: start;
 }

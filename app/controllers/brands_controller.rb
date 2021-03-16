@@ -15,10 +15,8 @@ class BrandsController < ApplicationController
     product = Product.find_by(brand: brand_id, article_number: barcode)
     p product
     if product.nil?
-      p "😩 ARTICLE NOT FOUND"
       render json: { url: nil }
     else
-      p "✅ ARTICLE FOUND"
       render json: { url: "/products/#{product.id}" }
     end
   end
