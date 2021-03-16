@@ -5,5 +5,5 @@ class Product < ApplicationRecord
   has_many :fabrics, through: :used_materials
   has_many :product_suppliers, dependent: :destroy
   has_many :suppliers, through: :product_suppliers
-  validates :name, :url_photo, :article_number, :category, :department, :brand, presence: true
+  validates :name, :photo_url, :article_number, :category, :department, :brand, presence: true
 end
