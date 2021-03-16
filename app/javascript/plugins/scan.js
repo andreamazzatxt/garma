@@ -1,4 +1,4 @@
-import { BrowserBarcodeReader } from '@zxing/library';
+import { BrowserMultiFormatReader } from '@zxing/library';
 
 
 const searchBarcode = (barcode) => {
@@ -28,29 +28,31 @@ const startScanner = () => {
   let selectedDeviceId;
   if (start){
       // Initialize new Scanner
-      const scanner = new BrowserBarcodeReader()
+      const scanner = new BrowserMultiFormatReader()
       scanner.getVideoInputDevices()
           .then((videoInputDevices) => {
               selectedDeviceId = videoInputDevices[0].deviceId
               start.addEventListener('click', () => {
 
-                  start.classList.add('hide');
-                  reset.classList.remove('hide');
+                  start.classList.add('scan-hide');
+                  reset.classList.remove('scan-hide');
                   scanner.decodeOnceFromVideoDevice(selectedDeviceId, 'video').then((result) => {
 
                       alert(result)
                       searchBarcode(result);
                       scanner.reset();
-                      start.classList.remove('hide');
-                      reset.classList.add('hide');
+                      start.classList.remove('scan-hide');
+                      reset.classList.add('scan-hide');
                   }).catch((err) => {
                     // only For testing than pass Error in the console
                       scanner.reset();
-                      start.classList.remove('hide');
+                      start.classList.remove('scan-hide');
                   })
               })
 
               reset.addEventListener('click', () => {
+                  start.classList.remove('scan-hide');
+                  reset.classList.add('scan-hide');
                   scanner.reset();
               })
 
