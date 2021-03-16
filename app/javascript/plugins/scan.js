@@ -1,9 +1,13 @@
+import { BrowserBarcodeReader } from '@zxing/library';
+
+const startScanner = () => {
+
 const start = document.getElementById('startButton')
 const reset = document.getElementById('resetButton')
 let selectedDeviceId;
 
   // Initialize new Scanner
-  const scanner = new ZXing.BrowserBarcodeReader()
+  const scanner = new BrowserBarcodeReader()
   scanner.getVideoInputDevices()
       .then((videoInputDevices) => {
           selectedDeviceId = videoInputDevices[0].deviceId
@@ -33,3 +37,9 @@ let selectedDeviceId;
       .catch((err) => {
           alert(err)
       })
+}
+
+export { startScanner }
+
+//run rails s with this to test on any mobiles on local host!:)
+//rails s -b 'ssl://0.0.0.0:3000?key=localhost.key&cert=localhost.crt'
