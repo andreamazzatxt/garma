@@ -1,0 +1,13 @@
+.scan-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-wrapper {
+  border: solid 3px $text-color;
+  border-radius: 10px;
+}
