@@ -5,3 +5,4 @@ class PagesController < ApplicationController
     @example = Product.first
   end
 end
+
