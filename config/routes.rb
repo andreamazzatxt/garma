@@ -5,8 +5,8 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :brands, only: [:index] do
-    collection do
-      get ':brand_id/scan/', to: 'brands#scan', as: 'scan'
+    member do
+      get 'scan/', to: 'brands#scan', as: 'scan'
       post 'search'
     end
   end
