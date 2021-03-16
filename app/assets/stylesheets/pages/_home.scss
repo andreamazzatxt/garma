@@ -11,17 +11,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 200px;
-
+  padding-top: 150px;
+  color: #ffff;
+  font-size: 20px;
+  letter-spacing: 1.5px;
 }
 
 .container h1 {
   font-size: 70px;
   font-weight: 100;
-  background-color: #666666;
-  color: transparent;
-  background-clip: text;
-  text-shadow: rgba(245,245,245, 80%) 2px 2px 1px;
+  color: rgba(255,255,255,0.4);
+  text-shadow: 1px 2px 3px #eee, 0 0 0 #000, 1px 2px 3px #eee;
 }
 
 
@@ -29,12 +29,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 150px;
+  padding-top: 100px;
 }
 
 .footer-section2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-   padding-top: 50px;
+   padding-top: 20px;
 }
+
+.logo {
+  filter: drop-shadow(#686868 1px 2px 3px);
+}
+
+
