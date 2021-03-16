@@ -56,7 +56,6 @@ puts 'Brands seed done! 💪'
 hm_products = JSON.parse(open('db/scraped_data/hm_items.json').read)
 
 hm_products.each do |product|
-  p product
   instance = Product.create!(
             name: product["name"],
             category: product["article_type"],
@@ -67,8 +66,7 @@ hm_products.each do |product|
             )
 
   product["composition"].each do |material|
-    p material["fiber"].downcase
-    p fabric = Fabric.where(name: material["fiber"].downcase).take
+    fabric = Fabric.where(name: material["fiber"].downcase).take
     UsedMaterial.create!(
                 percentage: material["percentage"],
                 fabric: fabric,
@@ -76,7 +74,7 @@ hm_products.each do |product|
                 )
   end
 
-    if product["suppliers"]["exist?"]
+    if product["suppliers"] && product["suppliers"]["exist?"]
       product["suppliers"]["list"].each do |supplier|
         current = Supplier.create!(
           name: supplier["name"],
