@@ -1,21 +1,22 @@
 <div class="product-card">
 
-    <div class="icon">
-      <%= icon %>
-    </div>
+  <div class="icon">
+    <%= render field_icon %>
+  </div>
 
 
-    <div class="rating-box">
-      <h5 class="rating-title"><%= title %> </h5>
-      <div class="rating-bar">
-        <!-- interpolate the average of rating -->
-        <div class="rate-8">
-          <span class="rate-8 blue">&nbsp;</span>
-        </div>
+  <div class="rating-box">
+    <h5 class="rating-title"><%= title %> </h5>
+    <div class="rating-bar">
+      <!-- interpolate the average of rating -->
+      <div class="rate-8">
+        <span class="rate-8 blue">&nbsp;</span>
       </div>
     </div>
-
-    <div class="dropdown-icon active">
-      <i class="fas fa-caret-down"></i>
-    </div>
   </div>
+
+  <div class="dropdown-icon active">
+    <i id="open-cordeon" class="fas fa-caret-down"></i>
+    <i id="close-cordeon"class="fas fa-caret-up"></i>
+  </div>
+</div>
