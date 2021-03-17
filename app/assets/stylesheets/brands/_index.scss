@@ -1,15 +1,27 @@
 @import "scan";
 
+.mobile-container {
+   width: 100vw;
+   height: 100vh;
+   margin: 0 auto;
+}
+
 .header-section {
-  width: 100vw;
-  height:30vh;
+  height:25vh;
+  margin: 15px 10px 0px 15px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .teaser {
-   padding-left: 15px;
+
 }
 
-.avatar {
+.profile-picture {
+
+}
+
+.brand-selection {
+  margin: 15px 10px 0px 15px;
+
 }
