@@ -105,7 +105,4 @@ hm_products.each do |product|
 
 end
 
-
-
-
 puts 'Seed complete! 🌱'
