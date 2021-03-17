@@ -1,10 +1,163 @@
 <div class="mobile-container">
 
- <%= render '/components/product-card' , title: 'Brands', field_icon:'/components/barcode_icon'%>
- <%= render '/components/product-card' , title: 'Fabrics', field_icon:'/components/barcode_icon'%>
- <%= render '/components/product-card' , title: 'Fabrics', field_icon:'/components/barcode_icon'%>
+  <!--------------------------product hero section------------------------------------>
+  <div class="product-title">
+   <h3><%= @product.brand.name %></h3>
+   <h2><%= @product.name %></h2>
+ </div>
+
+ <div class="rating-leafs-container">
+<!--     <h2>Leafs goes here</h2>
+ -->    <%= render 'shared/leaf', rating: 3 %>
+  </div>
+
+<div class="photo-container">
+
+</div>
+<p class="article-num">Art No:<%= @product.article_number  %> </p>
 
 
+<!--------------------------brand section------------------------------------>
+
+
+<%= render '/components/product-card' , title: 'Brand', field_icon:'/components/barcode_icon'%>
+
+
+<!-- section to hide -->
+
+<div class="product-title">
+ <h2>Brand</h2>
+</div>
+
+<div class="rating-leafs-container total">
+  <h2>Leafs goes here</h2>
+</div>
+
+<div class="rating-article-container">
+  <div class="description-article">
+    <article><%= @product.brand.planet_description %> </article>
+    <div class="rating-leafs-container complementary-leafs ">
+      <h5>Rating planet Leafs Logic</h5>
+    </div>
+  </div>
+
+  <div class="description-article">
+    <article><%= @product.brand.people_description %> </article>
+    <div class="rating-leafs-container complementary-leafs ">
+      <h5>Rating People Leafs Logic</h5>
+    </div>
+  </div>
+
+  <div class="description-article">
+    <article><%= @product.brand.animals_description %> </article>
+    <div class="rating-leafs-container complementary-leafs ">
+      <h5>Rating Animals Leafs Logic</h5>
+    </div>
+  </div>
+
+</div>
+
+<div class="arrow-open-close">
+  <i id="close-cordeon"class="fas fa-caret-up fa-3x"></i>
+</div>
+
+
+
+
+<!--------------------------Fabric section------------------------------------>
+
+<%= render '/components/product-card' , title: 'Fabric', field_icon:'/components/barcode_icon'%>
+
+<!-- section to hide -->
+
+<div class="product-title">
+ <h2>Fabric</h2>
+</div>
+
+<div class="rating-leafs-container total">
+  <h2>Leafs goes here</h2>
+</div>
+
+
+
+<div class="rating-article-container">
+  <div class="description-article">
+
+    <ul>
+      <% @product.used_materials.each do |material| %>
+      <li><h5><%= material.fabric.name %><strong>:</strong> <%= material.percentage %> <strong>%</strong></h5></li>
+      <% end %>
+    </ul>
+
+  </div>
+</div>
+
+
+
+<div class="rating-article-container">
+  <div class="description-article">
+
+    <% @product.used_materials.each do |material| %>
+      <h3><%= material.fabric.name.capitalize %> Impact</h3>
+      <article><%= material.fabric.description %> </article>
+    <div class="rating-leafs-container complementary-leafs ">
+      <h5>Rating Material Leafs Logic</h5>
+    </div>
+    <% end %>
+
+  </div>
+</div>
+
+<div class="arrow-open-close">
+  <i id="close-cordeon"class="fas fa-caret-up fa-3x"></i>
+</div>
+
+
+
+<!--------------------------supplier section------------------------------------>
+
+<%= render '/components/product-card' , title: 'Supplier', field_icon:'/components/barcode_icon'%>
+
+<!-- section to hide -->
+
+
+<div class="product-title">
+ <h2>Supplier</h2>
+</div>
+
+<div class="rating-leafs-container total">
+  <h2>Leafs goes here</h2>
+</div>
+
+
+
+<div class="rating-article-container">
+  <div class="description-article">
+
+    <% @product.suppliers.each do |supplier| %>
+      <h3>Made in <%= supplier.country %></h3>
+      <p>From:</p>
+       <h4><%= supplier.name %></h4>
+      <p>Description:</p>
+
+      <!-- to fill with informations -->
+
+      <div class="empty-square d-flex justify-content-center align-items-center">
+        <p>to fill with some supplier description</p>
+      </div>
+
+
+      <div class="rating-leafs-container complementary-leafs ">
+        <h5>Rating Material Leafs Logic</h5>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+
+<div class="arrow-open-close">
+  <i id="close-cordeon"class="fas fa-caret-up fa-3x"></i>
+</div>
 
 </div>
 

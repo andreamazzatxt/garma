@@ -1,12 +1,14 @@
 .product-card{
   width:90vw;
-  height:5rem;
+  height:6rem;
   background-color: white;
   border-radius:10px;
   margin:0 auto;
+  margin-bottom:1rem;
   display:flex;
   justify-content:space-around;
   align-items:center;
+
 }
 
 .rating-box{
@@ -20,11 +22,12 @@
   width:8rem;
   display:flex;
   justify-content:flex-start;
-  height:5px;
+  height:.8rem;
   background:gray;
   border:2px solid yellow;
   padding:3px;
   position:relative;
+  border-radius:10px;
   span{
     position:absolute;
     top:0;
@@ -38,6 +41,7 @@
 
 /* Used to color the bars */
 .blue{ background:blue; }
+.red{ background:orange; }
 .red{ background:red; }
 
 /* .rate-n, n being the rating from 1 to 10 */
