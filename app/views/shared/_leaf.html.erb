@@ -1,0 +1,9 @@
+
+<div class="leaf-container">
+  <% rating.times do %>
+    <%= render 'icons/leaf_icon_active' %>
+  <% end %>
+  <% (5-rating).times do %>
+  <%= render 'icons/leaf_icon_disabled' %>
+  <% end %>
+</div>
