@@ -14,7 +14,7 @@
   <!-- body -->
   <div class="brand-selection">
     <% @brands.each do |brand| %>
-      <%= render 'components/brand-card', picture:brand.photo.key %>
+      <%= render 'components/brand-card', picture:brand.photo.key, brand:brand %>
     <% end %>
   </div>
 
