@@ -1,1 +1,15 @@
-@import "scan"
+@import "scan";
+
+.header-section {
+  width: 100vw;
+  height:30vh;
+  display: flex;
+  align-items: center;
+}
+
+.teaser {
+   padding-left: 15px;
+}
+
+.avatar {
+}
