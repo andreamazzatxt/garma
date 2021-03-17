@@ -4,16 +4,15 @@
   <div class="product-title">
    <h3><%= @product.brand.name %></h3>
    <h2><%= @product.name %></h2>
-   <p><%= @product.total_rating %></p>
+   <p>Total Rating :<%= @product.total_rating %></p>
  </div>
 
  <div class="rating-leafs-container">
-<!--     <h2>Leafs goes here</h2>
- -->    <%= render 'shared/leaf', rating: @product.total_rating %>
+    <%= render 'shared/leaf', rating: @product.total_rating %>
   </div>
 
 <div class="photo-container">
-
+  <img src='<%= @product.photo_url %>' alt="<%= @product.name %> picture">
 </div>
 <p class="article-num">Art No:<%= @product.article_number  %> </p>
 
