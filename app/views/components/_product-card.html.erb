@@ -4,17 +4,10 @@
       <%= render 'icons/brand_icon' %>
     </div>
 
-
-    <div class="rating-box">
-      <h5 class="rating-title"><%= title %> </h5>
-<!--       <div class="rating-bar"> -->
-        <!-- interpolate the average of rating -->
-<!--         <div class="rate-8">
-          <span class="rate-8 blue">&nbsp;</span>
-        </div>
-      </div> -->
+  <div class="rating-box">
+    <h3 class="rating-title"><%= title %> </h3>
       <%= render 'shared/rating_bar', rating: rating %>
-    </div>
+  </div>
 
     <div class="dropdown-icon active">
       <i class="fas fa-caret-down"></i>
