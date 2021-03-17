@@ -1,0 +1,59 @@
+.product-card{
+  width:90vw;
+  height:5rem;
+  background-color: white;
+  border-radius:10px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+}
+
+.rating-box{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+}
+
+.rating-bar{
+  width:8rem;
+  display:flex;
+  justify-content:flex-start;
+  height:5px;
+  background:gray;
+  border:2px solid yellow;
+  padding:3px;
+  position:relative;
+  span{
+    position:absolute;
+    top:0;
+    display:block;
+    height:100%;
+    left:0;
+    z-index: 100;
+  }
+}
+
+
+/* Used to color the bars */
+.blue{ background:blue; }
+.red{ background:red; }
+
+/* .rate-n, n being the rating from 1 to 10 */
+.rate-1{ width:10%; }
+.rate-2{ width:20%; }
+.rate-3{ width:30%; }
+.rate-4{ width:40%; }
+.rate-5{ width:50%; }
+.rate-6{ width:60%; }
+.rate-7{ width:70%; }
+.rate-8{
+  width:80%;
+  // height:100%;
+  // background-color:blue;
+
+ }
+.rate-9{ width:90%; }
+.rate-10{ width:100%; }
+
