@@ -1,23 +1,23 @@
-
 <div class="mobile-container">
   <!-- header -->
   <div class="header-section">
     <!-- teaser -->
-    <div class="teaser">
+    <div>
       <p>Choose your Brand</p>
       <h1>Most popular Brands</h1>
     </div>
     <!-- avatar -->
-    <div class="profile-picture">
+    <div>
      <%= cl_image_tag current_user.photo.key, class: 'avatar', height: 70, width: 70, crop: :fill %>
     </div>
   </div>
   <!-- body -->
   <div class="brand-selection">
     <% @brands.each do |brand| %>
-     <%= cl_image_tag brand.photo.key, height: 100, width: 100, crop: :fill %>
+      <%= render 'components/brand-card', picture:brand.photo.key, brand:brand %>
     <% end %>
   </div>
+
 
 </div>
 
