@@ -6,10 +6,9 @@
    <h2><%= @product.name %></h2>
  </div>
 
- <div class="rating-leafs-container">
-<!--     <h2>Leafs goes here</h2>
- -->    <%= render 'shared/leaf', rating: 3 %>
-  </div>
+<div class="rating-leafs-container">
+  <%= render 'shared/leaf', rating: 3 %>
+</div>
 
 <div class="photo-container">
 
@@ -30,28 +29,28 @@
 </div>
 
 <div class="rating-leafs-container total">
-  <h2>Leafs goes here</h2>
+  <%= render 'shared/leaf', rating: 3 %>
 </div>
 
 <div class="rating-article-container">
   <div class="description-article">
     <article><%= @product.brand.planet_description %> </article>
     <div class="rating-leafs-container complementary-leafs ">
-      <h5>Rating planet Leafs Logic</h5>
+      <%= render 'shared/leaf', rating: 3 %>
     </div>
   </div>
 
   <div class="description-article">
     <article><%= @product.brand.people_description %> </article>
     <div class="rating-leafs-container complementary-leafs ">
-      <h5>Rating People Leafs Logic</h5>
+      <%= render 'shared/leaf', rating: 3 %>
     </div>
   </div>
 
   <div class="description-article">
     <article><%= @product.brand.animals_description %> </article>
     <div class="rating-leafs-container complementary-leafs ">
-      <h5>Rating Animals Leafs Logic</h5>
+      <%= render 'shared/leaf', rating: 3 %>
     </div>
   </div>
 
@@ -75,7 +74,7 @@
 </div>
 
 <div class="rating-leafs-container total">
-  <h2>Leafs goes here</h2>
+  <%= render 'shared/leaf', rating: 3 %>
 </div>
 
 
@@ -98,10 +97,10 @@
   <div class="description-article">
 
     <% @product.used_materials.each do |material| %>
-      <h3><%= material.fabric.name.capitalize %> Impact</h3>
-      <article><%= material.fabric.description %> </article>
+    <h3><%= material.fabric.name.capitalize %> Impact</h3>
+    <article><%= material.fabric.description %> </article>
     <div class="rating-leafs-container complementary-leafs ">
-      <h5>Rating Material Leafs Logic</h5>
+      <%= render 'shared/leaf', rating: 3 %>
     </div>
     <% end %>
 
@@ -126,7 +125,7 @@
 </div>
 
 <div class="rating-leafs-container total">
-  <h2>Leafs goes here</h2>
+  <%= render 'shared/leaf', rating: 3 %>
 </div>
 
 
@@ -135,21 +134,21 @@
   <div class="description-article">
 
     <% @product.suppliers.each do |supplier| %>
-      <h3>Made in <%= supplier.country %></h3>
-      <p>From:</p>
-       <h4><%= supplier.name %></h4>
-      <p>Description:</p>
+    <h3>Made in <%= supplier.country %></h3>
+    <p>From:</p>
+    <h4><%= supplier.name %></h4>
+    <p>Description:</p>
 
-      <!-- to fill with informations -->
+    <!-- to fill with informations -->
 
-      <div class="empty-square d-flex justify-content-center align-items-center">
-        <p>to fill with some supplier description</p>
-      </div>
+    <div class="empty-square d-flex justify-content-center align-items-center">
+      <p>to fill with some supplier description</p>
+    </div>
 
 
-      <div class="rating-leafs-container complementary-leafs ">
-        <h5>Rating Material Leafs Logic</h5>
-      </div>
+    <div class="rating-leafs-container complementary-leafs ">
+      <%= render 'shared/leaf', rating: 3 %>
+    </div>
     <% end %>
 
   </div>
