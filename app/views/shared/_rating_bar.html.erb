@@ -1,0 +1,10 @@
+<% color = 'good' if rating == 4 || rating ==  5 %>
+<% color = 'medium' if rating == 3 %>
+<% color = 'bad' if rating == 1 || rating ==  2 %>
+
+
+<div class="rating-shadow">
+   <div class="rating-bar">
+      <span class="rate-<%= rating %> color-<%= color %>  ">&nbsp;</span>
+  </div>
+</div>

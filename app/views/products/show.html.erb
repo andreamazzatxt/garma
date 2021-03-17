@@ -8,7 +8,7 @@
 
   <div class="rating-leafs-container">
 <!--     <h2>Leafs goes here</h2>
- -->    <%= render 'shared/leaf', rating: 3 %>
+ -->    <%= render 'shared/leaf', rating: 2 %>
   </div>
 
   <div class="photo-container">
@@ -17,7 +17,7 @@
   <p class="article-num">Art No:<%= @product.article_number  %> </p>
 
 
- <%= render '/components/product-card' , title: 'Brand', field_icon:'/components/barcode_icon'%>
+ <%= render '/components/product-card' , title: 'Brand', field_icon:'/components/barcode_icon', rating: @product.brand.rating%>
 
   <div class="product-title">
    <h2>Brand</h2>
@@ -46,8 +46,8 @@
 
 
 
- <%= render '/components/product-card' , title: 'Fabric', field_icon:'/components/barcode_icon'%>
- <%= render '/components/product-card' , title: 'Supplier', field_icon:'/components/barcode_icon'%>
+ <%= render '/components/product-card' , title: 'Fabric', field_icon:'/components/barcode_icon', rating: 2%>
+ <%= render '/components/product-card' , title: 'Supplier', field_icon:'/components/barcode_icon', rating: 2%>
 
 
 
