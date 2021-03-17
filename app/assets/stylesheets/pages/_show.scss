@@ -28,6 +28,17 @@
   margin-bottom:2rem;
 }
 
+.complementary-leafs{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:360px;
+  height:4rem;
+  margin:0 auto;
+  background-color:purple;
+  margin-bottom:2rem;
+}
+
 
 
 .photo-container{
@@ -51,5 +62,23 @@
   .description-article{
     padding-bottom:1rem;
   }
+}
+
+.empty-square{
+  width:500px;
+  height: 500px;
+  background-color:violet;
+  margin:0 auto;
+  border-radius: 20px;
+}
+
+.arrow-open-close{
+  width:40px;
+  height:40px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color:gray;
+  margin:0 auto 3rem;
 }
 
