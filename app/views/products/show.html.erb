@@ -1,8 +1,52 @@
 <div class="mobile-container">
 
- <%= render '/components/product-card' , title: 'Brands', field_icon:'/components/barcode_icon'%>
- <%= render '/components/product-card' , title: 'Fabrics', field_icon:'/components/barcode_icon'%>
- <%= render '/components/product-card' , title: 'Fabrics', field_icon:'/components/barcode_icon'%>
+
+  <div class="product-title">
+   <h3><%= @product.brand.name %></h3>
+   <h2><%= @product.name %></h2>
+  </div>
+
+  <div class="rating-leafs-container">
+    <h2>Leafs goes here</h2>
+  </div>
+
+  <div class="photo-container">
+
+  </div>
+  <p class="article-num">Art No:<%= @product.article_number  %> </p>
+
+
+ <%= render '/components/product-card' , title: 'Brand', field_icon:'/components/barcode_icon'%>
+
+  <div class="product-title">
+   <h2>Brand</h2>
+  </div>
+
+  <div class="rating-leafs-container">
+    <h2>Leafs goes here</h2>
+  </div>
+
+  <div class="rating-article-container">
+    <div class="description-article">
+      <article><%= @product.brand.planet_description %> </article>
+    </div>
+
+    <div class="description-article">
+      <article><%= @product.brand.people_description %> </article>
+    </div>
+
+    <div class="description-article">
+      <article><%= @product.brand.animals_description %> </article>
+    </div>
+
+  </div>
+
+
+
+
+
+ <%= render '/components/product-card' , title: 'Fabric', field_icon:'/components/barcode_icon'%>
+ <%= render '/components/product-card' , title: 'Supplier', field_icon:'/components/barcode_icon'%>
 
 
 
