@@ -2,23 +2,22 @@
   <!-- header -->
   <div class="header-section">
     <!-- teaser -->
-    <div class="teaser">
+    <div>
       <p>Choose your Brand</p>
       <h1>Most popular Brands</h1>
     </div>
     <!-- avatar -->
-    <div class="profile-picture">
+    <div>
      <%= cl_image_tag current_user.photo.key, class: 'avatar', height: 70, width: 70, crop: :fill %>
     </div>
   </div>
   <!-- body -->
   <div class="brand-selection">
     <% @brands.each do |brand| %>
-     <div class="brand-card">
-        <%= cl_image_tag brand.photo.key, height: 90, width: 90, crop: :fill %>
-      </div>
+      <%= render 'components/brand-card', picture:brand.photo.key %>
     <% end %>
   </div>
+
 
 </div>
 
