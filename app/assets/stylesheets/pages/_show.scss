@@ -1,0 +1,55 @@
+
+
+
+.product-title{
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+  text-align: center;
+  padding:3rem 2.1rem 1rem ;
+  background-color:yellow;
+  margin:0 auto;
+  width:500px;
+  text-align:justify;
+  h3{
+    text-align: left;
+    margin:0;
+  }
+}
+
+.rating-leafs-container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:420px;
+  height:4rem;
+  margin:0 auto;
+  background-color:crimson;
+  margin-bottom:2rem;
+}
+
+
+
+.photo-container{
+  width:400px;
+  height: 400px;
+  background-color:pink;
+  margin:0 auto;
+  border-radius: 20px;
+}
+
+.article-num{
+  margin:0 auto;
+  display:flex;
+  justify-content:center;
+  background-color:green;
+  margin-bottom:3rem;
+}
+
+.rating-article-container{
+  padding:0 2rem;
+  .description-article{
+    padding-bottom:1rem;
+  }
+}
+
