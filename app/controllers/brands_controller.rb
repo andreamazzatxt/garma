@@ -10,6 +10,7 @@ class BrandsController < ApplicationController
   end
 
   def search
+    @disable_nav
     brand_id = params["id"]
     barcode = params["barcode"]["text"]
     product = Product.find_by(brand: brand_id, article_number: barcode)
