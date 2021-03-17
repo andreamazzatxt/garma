@@ -1,8 +1,8 @@
-import { BrowserBarcodeReader } from '@zxing/library';
+import { BrowserMultiFormatReader } from '@zxing/library';
 
 
 const searchBarcode = (barcode) => {
-  const id = document.getElementById('startButton').dataset.brandId
+  const id = document.getElementById('scanner-container').dataset.brandId
   fetch(`/brands/${id}/search`, {
   method: 'post',
   body: JSON.stringify({barcode: barcode}),
@@ -15,7 +15,10 @@ const searchBarcode = (barcode) => {
     }).then(function(data) {
       if (data.url !== null)
       {
-        window.location.href = data.url
+        window.location.href = data.url;
+      }else{
+        alert(' 🕵️  Article not found!')
+        window.location.reload();
       }
     });
 
@@ -23,37 +26,35 @@ const searchBarcode = (barcode) => {
 
 const startScanner = () => {
 
+  const video = document.getElementById('video')
+  const videoWrapper = document.getElementById('scanner-container')
   const start = document.getElementById('startButton')
   const reset = document.getElementById('resetButton')
   let selectedDeviceId;
-  if (start){
+  if (videoWrapper){
+      // AddEventListener to show the focus bar only when the video stream is loaded
+      video.addEventListener('loadstart', () => {
+        videoWrapper.classList.remove('scan-hide');
+      })
       // Initialize new Scanner
-      const scanner = new BrowserBarcodeReader()
+      const scanner = new BrowserMultiFormatReader()
       scanner.getVideoInputDevices()
           .then((videoInputDevices) => {
               selectedDeviceId = videoInputDevices[0].deviceId
-              start.addEventListener('click', () => {
+              // start.addEventListener('click', () => {
 
-                  start.classList.add('hide');
-                  reset.classList.remove('hide');
                   scanner.decodeOnceFromVideoDevice(selectedDeviceId, 'video').then((result) => {
-
-                      alert(result)
                       searchBarcode(result);
                       scanner.reset();
-                      start.classList.remove('hide');
-                      reset.classList.add('hide');
                   }).catch((err) => {
-                    // only For testing than pass Error in the console
+                      console.log(err)
                       scanner.reset();
-                      start.classList.remove('hide');
                   })
-              })
+              // })
 
-              reset.addEventListener('click', () => {
-                  scanner.reset();
-              })
-
+           // reset.addEventListener('click', () => {
+           //        scanner.reset();
+           //    })
           })
           .catch((err) => {
               console.log(err)
