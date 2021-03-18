@@ -11,9 +11,9 @@ Rails.application.routes.draw do
     end
   end
   resources :products, only: [:show] do
-    resources :garderobe_items, only: [:create, :destroy]
+    resources :garderobe_items, only: [:create]
   end
-
+  resources :garderobe_items, only: [:destroy]
   resources :users, only: [:show, :edit, :update, :new, :create] do
     resources :products, only: [:index]
   end

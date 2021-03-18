@@ -28,8 +28,7 @@ const startScanner = () => {
 
   const video = document.getElementById('video')
   const videoWrapper = document.getElementById('scanner-container')
-  const start = document.getElementById('startButton')
-  const reset = document.getElementById('resetButton')
+  const exit = document.getElementById('scan-exit')
   let selectedDeviceId;
   if (videoWrapper){
       // AddEventListener to show the focus bar only when the video stream is loaded
@@ -44,22 +43,24 @@ const startScanner = () => {
               // start.addEventListener('click', () => {
 
                   scanner.decodeOnceFromVideoDevice(selectedDeviceId, 'video').then((result) => {
-                      searchBarcode(result);
                       scanner.reset();
+                      searchBarcode(result);
                   }).catch((err) => {
                       console.log(err)
-                      scanner.reset();
+
                   })
               // })
 
-           // reset.addEventListener('click', () => {
-           //        scanner.reset();
-           //    })
+           exit.addEventListener('click', () => {
+                window.location.href = '/brands'
+              })
           })
           .catch((err) => {
               console.log(err)
           })
         }
+
+
 }
 
 export { startScanner }
