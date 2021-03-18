@@ -13,7 +13,7 @@
   </div>
   <!-- search -->
   <div class="search">
-    <%= form_tag root_path, method: :get do %>
+    <%= form_tag brands_path, method: :get do %>
       <%= text_field_tag :query,
         params[:query],
         class: "search-bar",
