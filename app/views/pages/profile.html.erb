@@ -1,0 +1,59 @@
+<div class="mobile-container">
+
+
+
+
+<div class="profile-hero">
+    <%= render 'components/avatar_square', picture:current_user.photo.key %>
+    <div class="fullname">
+      <h1>Hi</h1>
+      <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
+    </div>
+</div>
+
+
+
+<div class="profile-info">
+  <ul class="user-list">
+
+    <li class="list-item">
+      <div class="icon-div">
+        <%= render 'icons/user_icon'%>
+      </div>
+        <h3>Username</h3>
+    </li>
+
+    <li class="list-item">
+      <div class="icon-div">
+        <%= render 'icons/mail_icon'%>
+      </div>
+        <h3>Email</h3>
+    </li>
+    <li class="list-item">
+      <div class="icon-div">
+        <%= render 'icons/birthday_icon'%>
+      </div>
+        <h3>Birthday</h3>
+    </li>
+
+
+    <li class="list-item">
+      <div class="icon-div">
+        <%= render 'icons/gender_icon'%>
+      </div>
+      <h3>Gender</h3>
+    </li>
+  </ul>
+
+</div>
+
+
+
+<div class="options">
+  <%= render 'components/profile_button'%>
+</div>
+
+
+
+
+</div>
