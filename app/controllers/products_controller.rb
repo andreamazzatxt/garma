@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show]
 
   def show
+    @saved = saved?
   end
 
   private
@@ -15,5 +16,12 @@ class ProductsController < ApplicationController
 
   def find_product
     @product = Product.find(params[:id])
+  end
+
+  def saved?
+    return false if current_user.nil?
+
+    product = GarderobeItem.where(user: current_user, product: @product)
+    return product.size.zero? ? false : true
   end
 end

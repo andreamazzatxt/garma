@@ -1,11 +1,28 @@
-<div class="menu-footer">
+<div id="menu-footer" class="menu-footer">
+
   <%= link_to brands_path do %>
-    <%= render 'icons/search_icon' %>
+    <div class="menu-button">
+      <div class="menu-inner-shadow">
+        <%= render 'icons/search_icon' , width: 20, height: 20 %>
+      </div>
+    </div>
   <% end %>
-  <%= render 'icons/divider' %>
-  <%= render 'icons/garderobe_icon' %>
-  <%= render 'icons/divider' %>
-  <%= render 'icons/user_icon' %>
-  <%= render 'icons/divider' %>
-  <%= render 'icons/hamburger_icon' %>
+
+  <div class="menu-button">
+    <div class="menu-inner-shadow">
+      <%= render 'icons/garderobe_icon' , width: 20, height: 20 %>
+    </div>
+  </div>
+
+  <div class="menu-button">
+    <div class="menu-inner-shadow">
+      <%= render 'icons/user_icon' , width: 20, height: 20 %>
+    </div>
+  </div>
+
+  <div class="menu-button">
+    <div class="menu-inner-shadow">
+      <%= render 'icons/hamburger_icon', width: 20, height: 20 %>
+    </div>
+  </div>
 </div>
