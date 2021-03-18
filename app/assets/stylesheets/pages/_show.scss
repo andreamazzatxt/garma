@@ -9,7 +9,7 @@
   padding:3rem 2.1rem 1rem ;
   background-color:yellow;
   margin:0 auto;
-  width:500px;
+  width:100%;
   text-align:justify;
   h3{
     text-align: left;
@@ -21,7 +21,7 @@
   display:flex;
   justify-content:center;
   align-items:center;
-  width:420px;
+  width:70%;
   height:4rem;
   margin:0 auto;
   background-color:crimson;
@@ -32,9 +32,9 @@
   display:flex;
   justify-content:center;
   align-items:center;
-  width:360px;
+  width:250px;
   height:4rem;
-  margin:0 auto;
+  margin:.3rem auto;
   background-color:purple;
   margin-bottom:2rem;
 }
@@ -42,10 +42,17 @@
 
 
 .photo-container{
-  width:400px;
-  height: 400px;
+  width:67%;
+  height: 500px;
   background-color:pink;
   margin:0 auto;
+  border-radius: 20px;
+}
+.product-img{
+  text-align: center;
+  width:100%;
+  height:100%;
+  object-fit: cover;
   border-radius: 20px;
 }
 

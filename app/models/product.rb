@@ -24,3 +24,4 @@ class Product < ApplicationRecord
   end
 
 end
+@product.used_materials
