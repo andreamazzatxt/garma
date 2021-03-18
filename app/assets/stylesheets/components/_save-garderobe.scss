@@ -1,0 +1,7 @@
+.save-container {
+  transition: 500ms;
+}
+
+.save-container:active {
+  transform: scale(0.8)
+}

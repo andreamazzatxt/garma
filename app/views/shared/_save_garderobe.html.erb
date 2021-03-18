@@ -1,0 +1,11 @@
+<div id="save-container" class="save-container">
+  <% if saved %>
+    <%= link_to garderobe_item_path(), method: :delete do %>
+      <%= render 'icons/heart_icon' %>
+    <% end %>
+  <% else %>
+    <%= link_to product_garderobe_items_path(product), method: :post, remote: true do %>
+      <%= render 'icons/heart_icon_disabled' %>
+    <% end %>
+  <% end %>
+</div>

@@ -22,5 +22,4 @@ class Product < ApplicationRecord
   def total_rating
     return ((brand.rating + fabrics_rating + suppliers_rating) / 3).round
   end
-
 end

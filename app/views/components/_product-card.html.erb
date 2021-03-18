@@ -1,15 +1,18 @@
-<div class="product-card">
+
+<button class="product-card">
 
     <div class="icon">
-      <%= render 'icons/brand_icon' %>
+      <%= render "/icons/#{field_icon}", field_icon: field_icon%>
     </div>
 
-  <div class="rating-box">
-    <h3 class="rating-title"><%= title %> </h3>
+    <div class="rating-box">
+      <h3 class="rating-title"><%= title %> </h3>
       <%= render 'shared/rating_bar', rating: rating %>
-  </div>
-
-    <div class="dropdown-icon active">
-      <i class="fas fa-caret-down"></i>
     </div>
-  </div>
+
+    <div>
+      <i id="arrow"class="fas fa-caret-down fa-2x"></i>
+    </div>
+
+</button>
+
