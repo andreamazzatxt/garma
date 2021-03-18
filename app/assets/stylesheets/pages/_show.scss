@@ -6,8 +6,8 @@
   justify-content:center;
   flex-direction:column;
   text-align: center;
-  padding:3rem 2.1rem 1rem ;
-  background-color:yellow;
+  padding:2rem 2.1rem .2rem ;
+  // background-color:yellow;
   margin:0 auto;
   width:100%;
   text-align:justify;
@@ -24,27 +24,32 @@
   width:70%;
   height:4rem;
   margin:0 auto;
-  background-color:crimson;
+  // background-color:crimson;
   margin-bottom:2rem;
+}
+button{
+  border:none;
 }
 
 .complementary-leafs{
   display:flex;
-  justify-content:center;
+  justify-content:left;
   align-items:center;
-  width:250px;
+  width:200px;
   height:4rem;
   margin:.3rem auto;
-  background-color:purple;
+  // background-color:purple;
   margin-bottom:2rem;
 }
 
 
 
 .photo-container{
-  width:67%;
-  height: 500px;
-  background-color:pink;
+  width:80vw;
+  height: 80vw;
+  max-width: 400px;
+  max-height: 400px;
+  // background-color:pink;
   margin:0 auto;
   border-radius: 20px;
 }
@@ -60,9 +65,10 @@
   margin:0 auto;
   display:flex;
   justify-content:center;
-  background-color:green;
+  // background-color:green;
   margin-bottom:3rem;
 }
+
 
 .rating-article-container{
   padding:0 2rem;
@@ -70,11 +76,17 @@
     padding-bottom:1rem;
   }
 }
+.disabled{
+  display:none;
+}
+.active{
+  display: block;
+}
 
 .empty-square{
   width:500px;
   height: 500px;
-  background-color:violet;
+  // background-color:violet;
   margin:0 auto;
   border-radius: 20px;
 }
@@ -85,7 +97,7 @@
   display:flex;
   justify-content:center;
   align-items:center;
-  background-color:gray;
+  // background-color:gray;
   margin:0 auto 3rem;
 }
 
