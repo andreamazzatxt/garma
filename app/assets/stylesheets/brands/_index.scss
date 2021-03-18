@@ -15,16 +15,23 @@
 }
 
 .search {
-  width: 100vw;
+  width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .search-bar {
   width:80vw;
   border-radius: 20px;
-  padding: 10px;
+  padding: 10px 30px 10px 10px;
   border: 2px solid #06436F;
+}
+
+.close-icon {
+  position:absolute;
+  left:85%;
+  top: 30%;
 }
 
 .brand-selection {

@@ -20,6 +20,9 @@
         placeholder: "Find your Brand"
       %>
     <% end %>
+    <% unless params[:query].nil? %>
+      <div class="close-icon" onclick="window.location.href='./brands'" style="cursor:pointer" title="back to brand overview"><i class="fas fa-times-circle"></i></div>
+    <% end %>
   </div>
   <!-- body -->
   <div class="brand-selection">
