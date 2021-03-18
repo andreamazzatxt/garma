@@ -3,12 +3,20 @@
   position: relative;
   height: 100vh;
   width: 100vw;
+  overflow:hidden;
 }
 
 .video-wrapper {
-  height: 100vh;
+  height: 100% !important;
+  width: auto !important;
 }
 
+#video::-webkit-media-controls {
+  display:none !important;
+}
+#video::-webkit-media-controls-enclosure {
+  display:none !important;
+}
 .scan-focus {
   position: absolute;
   bottom: 50%;
@@ -32,7 +40,7 @@
 }
 
 .scan-button-container {
-  bottom: 15%;
+  bottom: 3%;
   left: 5%;
   position: absolute;
   display: flex;
@@ -43,6 +51,7 @@
 
 .scan-close-icon {
   font-size: 2rem;
+  line-height: 0;
 }
 
 .scan-hide {

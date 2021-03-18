@@ -2,15 +2,15 @@ class BrandsController < ApplicationController
   skip_before_action :authenticate_user!
   skip_before_action :verify_authenticity_token, only: [:search]
   def index
-  @brands = Brand.all
+    @brands = Brand.all
   end
 
   def scan
+    @disable_nav = true
     @brand_id = params[:id]
   end
 
   def search
-    @disable_nav
     brand_id = params["id"]
     barcode = params["barcode"]["text"]
     product = Product.find_by(brand: brand_id, article_number: barcode)
