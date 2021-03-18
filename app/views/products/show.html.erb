@@ -4,16 +4,15 @@
   <div class="product-title">
    <h3><%= @product.brand.name %></h3>
    <h2><%= @product.name %></h2>
-   <p><%= @product.total_rating %></p>
+   <p>Total Rating :<%= @product.total_rating %></p>
  </div>
 
  <div class="rating-leafs-container">
-<!--     <h2>Leafs goes here</h2>
- -->    <%= render 'shared/leaf', rating: @product.total_rating %>
+    <%= render 'shared/leaf', rating: @product.total_rating %>
   </div>
 
 <div class="photo-container">
-
+  <img class="product-img" src='<%= @product.photo_url %>' alt="<%= @product.name %> picture">
 </div>
 <p class="article-num">Art No:<%= @product.article_number  %> </p>
 
@@ -23,7 +22,7 @@
 <!--------------------------brand section------------------------------------>
 
 
- <%= render '/components/product-card' , title: 'Brand', field_icon:'/components/barcode_icon', rating: @product.brand.rating %>
+ <%= render '/components/product-card' , title: 'Brand', field_icon:'/components/brand_icon', rating: @product.brand.rating %>
 
 <!--------------------------brand section------------------------------------>
 
@@ -32,7 +31,7 @@
 <!-- section to hide -->
 
 <div class="product-title">
- <h2>Brand</h2>
+ <h2><%= @product.brand.name %> </h2>
 </div>
 
 <div class="rating-leafs-container total">
@@ -75,7 +74,7 @@
 
 <!--------------------------Fabric section------------------------------------>
 
- <%= render '/components/product-card' , title: 'Fabric', field_icon:'/components/barcode_icon', rating: @product.fabrics_rating %>
+ <%= render '/components/product-card' , title: 'Fabric', field_icon:'/components/fabric_icon', rating: @product.fabrics_rating %>
 
 <!-- section to hide -->
 
@@ -95,7 +94,7 @@
 
     <ul>
       <% @product.used_materials.each do |material| %>
-      <li><h5><%= material.fabric.name %><strong>:</strong> <%= material.percentage %> <strong>%</strong></h5></li>
+      <li><h5><%= material.fabric.name %><strong>: <%= material.percentage %> % </strong></h5></li>
       <% end %>
     </ul>
 
@@ -129,7 +128,7 @@
 
 
 
- <%= render '/components/product-card' , title: 'Supplier', field_icon:'/components/barcode_icon', rating: @product.suppliers_rating %>
+ <%= render '/components/product-card' , title: 'Supplier', field_icon:'/components/supplier_icon', rating: @product.suppliers_rating %>
 
 
 <!-- section to hide -->
