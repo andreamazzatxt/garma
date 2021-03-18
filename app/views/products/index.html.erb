@@ -1,0 +1,19 @@
+<div class="garderobe-wrapper">
+<h1>Your Garderobe</h1>
+<div class="garderobe-resume-box">
+  <%= image_tag "chakra_#{@karma}.png" %>
+  <h4>Your  avarege karma is <%= @karma.capitalize %>!</h4>
+  <p>Your Karma is calculated based on the articles in saved in your guardrobe.
+Help us to be more accurate please save in your guardrobe only the items that you actually buy</p>
+</div>
+
+
+<div class="garderobe-card-container">
+  <% @products.each do |product| %>
+    <%= render 'shared/garderobe_card', product: product %>
+  <% end %>
+</div>
+
+</div>
+
+
