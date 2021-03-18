@@ -6,6 +6,11 @@ class ProductsController < ApplicationController
     @saved = saved?
   end
 
+  def index
+    garderobe = GarderobeItem.where(user: current_user)
+    @products = garderobe.map { |item| item.product }
+  end
+
   private
 
   # Params and find PRODUCT

@@ -1,0 +1,10 @@
+<div class="garderobe-card">
+  <img src="<%= product.photo_url %>" alt="">
+  <div class="garderobe-card-info">
+    <h4><%= product.name %></h4>
+    <p><%= product.brand.name %></p>
+    <div class="garderobe-leaf-container">
+      <%= render 'shared/leaf_small', rating: product.total_rating %>
+    </div>
+  </div>
+</div>

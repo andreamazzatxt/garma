@@ -1,0 +1,19 @@
+.garderobe-card{
+  background: #F7F7F7;
+  border-radius: 20px;
+  width: 350px;
+  height: 127.6px;
+  display: flex;
+  align-items: center;
+  img {
+    width: 89px;
+    height: 89px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+}
+
+.garderobe-leaf-container {
+  width: 150px;
+}

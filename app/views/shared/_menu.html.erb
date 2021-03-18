@@ -7,12 +7,13 @@
       </div>
     </div>
   <% end %>
-
+  <%= link_to user_products_path(current_user) do %>
   <div class="menu-button">
     <div class="menu-inner-shadow">
       <%= render 'icons/garderobe_icon' , width: 20, height: 20 %>
     </div>
   </div>
+  <% end %>
 
   <div class="menu-button">
     <div class="menu-inner-shadow">
