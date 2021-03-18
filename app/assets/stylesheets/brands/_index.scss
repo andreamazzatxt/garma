@@ -7,14 +7,25 @@
 }
 
 .header-section {
-  height:25vh;
+  height:150px;
   margin: 15px 10px 0px 15px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
 }
 
+.search {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
 
+.search-bar {
+  width:80vw;
+  border-radius: 20px;
+  padding: 10px;
+  border: 2px solid #06436F;
+}
 
 .brand-selection {
   margin: 15px 10px 0px 15px;

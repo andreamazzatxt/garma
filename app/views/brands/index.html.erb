@@ -11,6 +11,16 @@
      <%= cl_image_tag current_user.photo.key, class: 'avatar', height: 70, width: 70, gravity:"faces", crop: :fill %>
     </div>
   </div>
+  <!-- search -->
+  <div class="search">
+    <%= form_tag root_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search-bar",
+        placeholder: "Find your Brand"
+      %>
+    <% end %>
+  </div>
   <!-- body -->
   <div class="brand-selection">
     <% @brands.each do |brand| %>
