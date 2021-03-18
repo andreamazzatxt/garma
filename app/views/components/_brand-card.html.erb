@@ -1,5 +1,5 @@
 <%= link_to scan_brand_path(brand) do  %>
 <div class="brand-card">
-  <%= cl_image_tag picture, height: 80, width: 80, crop: :scale %>
+  <%= cl_image_tag picture, height: 80, width: 80, crop: :scale, loading:"lazy" %>
 </div>
 <% end %>
