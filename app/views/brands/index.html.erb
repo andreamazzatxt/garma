@@ -8,8 +8,21 @@
     </div>
     <!-- avatar -->
     <div>
-     <%= cl_image_tag current_user.photo.key, class: 'avatar', height: 70, width: 70, crop: :fill %>
+     <%= cl_image_tag current_user.photo.key, class: 'avatar', height: 70, width: 70, gravity:"faces", crop: :fill %>
     </div>
+  </div>
+  <!-- search -->
+  <div class="search">
+    <%= form_tag brands_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "search-bar",
+        placeholder: "Find your Brand"
+      %>
+    <% end %>
+    <% unless params[:query].nil? %>
+      <div class="close-icon" onclick="window.location.href='./brands'" style="cursor:pointer" title="back to brand overview"><i class="fas fa-times-circle"></i></div>
+    <% end %>
   </div>
   <!-- body -->
   <div class="brand-selection">
