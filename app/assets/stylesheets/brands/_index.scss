@@ -1,4 +1,5 @@
 @import "scan";
+
 .mobile-container {
    width: 100vw;
    height: 100vh;
@@ -6,19 +7,38 @@
 }
 
 .header-section {
-  height:25vh;
+  height:150px;
   margin: 15px 10px 0px 15px;
   display: flex;
   align-items: flex-start;
+  justify-content: space-between;
 }
 
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
 
+.search-bar {
+  width:80vw;
+  border-radius: 20px;
+  padding: 10px 30px 10px 10px;
+  border: 2px solid #06436F;
+}
+
+.close-icon {
+  position:absolute;
+  left:79%;
+  top: 30%;
+}
 
 .brand-selection {
   margin: 15px 10px 0px 15px;
   display: flex;
   flex-wrap: wrap;
-justify-content: space-around;
+  justify-content: space-around;
 }
 
 .brand-card {
