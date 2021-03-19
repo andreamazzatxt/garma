@@ -5,8 +5,7 @@
   height: 100vh;
   width: 100vw;
   background-color: #6AE29C;
-  background-image: linear-gradient(#6AE29C, #4EC5EF);
-  background-repeat: no-repeat;
+background: linear-gradient(180deg, #6AE29C 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #4EC5EF 0%, rgba(78, 197, 239, 0) 100%);  background-repeat: no-repeat;
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
@@ -22,7 +21,6 @@
   font-size: 70px;
   font-weight: 100;
   color: rgba(255,255,255,0.4);
-  text-shadow: 1px 2px 3px #eee, 0 0 0 #000, 1px 2px 3px #eee;
 }
 
 .logo-container {
@@ -51,7 +49,10 @@
 }
 
 .logo {
-  filter: drop-shadow(#686868 1px 2px 3px);
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 
