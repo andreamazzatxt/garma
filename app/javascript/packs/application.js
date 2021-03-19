@@ -24,6 +24,9 @@ import { BrowserMultiFormatReader } from '@zxing/library';
 import { startScanner } from '../plugins/scan'
 import { accordion } from '../plugins/accordion'
 import { initFlatpickr } from "../plugins/flatpickr";
+import { SLIDEPAGE } from '../plugins/slidepage';
+import { SLIDEPAGE } from '../plugins/slidepage.min';
+
 
 initFlatpickr();
 

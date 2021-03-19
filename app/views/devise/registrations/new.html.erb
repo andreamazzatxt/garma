@@ -3,8 +3,9 @@
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="app">
+
     <div class="form-inputs">
+      <div class="app">
       <div class="sp_page">Page 1
         <%= f.input :first_name,
                     required: true,
@@ -14,12 +15,15 @@
                     required: true,
                     autofocus: true,
                     input_html: { autocomplete: "last_name"} %>
+        <button onclick="sp.next()">NEXT</button>
       </div>
       <div class="sp_page">Page 2
         <%= f.input :email,
                     required: true,
                     autofocus: true,
                     input_html: { autocomplete: "email" }%>
+        <button onclick="sp.prev()">PREV</button>
+        <button onclick="sp.next()">NEXT</button>
       </div>
       <div class="class sp_page">Page 3
         <%= f.input :birthday,
