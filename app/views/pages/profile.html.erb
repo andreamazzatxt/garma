@@ -1,3 +1,5 @@
+
+
 <div class="mobile-container">
 
 
@@ -11,7 +13,6 @@
       <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
     </div>
 </div>
-
 
 
 <div class="profile-info">
@@ -56,14 +57,49 @@
 
 </div>
 
+<% if !user_signed_in? %>
+<!-- just a margin if the user is not logged in -->
+<div class="margin-for-menu"></div>
+<% end %>
 
 
 <div class="buttons-container">
 
-  <%= render 'components/profile_button', text:'ciao' %>
-  <%= render 'components/profile_button', text:'bye' %>
-  <%= render 'components/profile_button', text:'cjjjjj' %>
-  <%= render 'components/profile_button', text:'ciao' %>
+<!--   MODIFY WITH ABOUT US PATH PAGE -->
+  <%= link_to new_user_session_path, class:'profile-button' do %>
+    <%= render 'components/profile_button', text:'About Us' %>
+  <% end %>
+
+  <% if user_signed_in? %>
+
+
+
+    <!--   MODIFY WITH EDIT PATH PAGE -->
+     <%= link_to new_user_session_path, class:'profile-button' do %>
+      <%= render 'components/profile_button', text:'Edit Profile' %>
+      <% end %>
+
+
+    <%= link_to user_products_path(current_user), class:'profile-button' do %>
+      <%= render 'components/profile_button', text:'My Garderobe' %>
+    <% end %>
+
+    <%= link_to root_path , class:'profile-button' do %>
+      <%= render 'components/profile_button', text:'Logout' %>
+    <% end %>
+
+  <% end %>
+
+    <%= link_to brands_index_path ,class:'profile-button' do %>
+      <%= render 'components/profile_button', text:'Store Locator' %>
+    <% end %>
+
+  <% if !user_signed_in? %>
+    <%= link_to new_user_session_path, class:'profile-button' do %>
+      <%= render 'components/profile_button', text:'Sign up' %>
+    <% end %>
+
+  <% end %>
 
 </div>
 
