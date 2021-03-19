@@ -1,5 +1,16 @@
 .save-container {
-  transition: 500ms;
+  transition: 200ms;
+  margin-top:20px;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  a {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .save-container:active {

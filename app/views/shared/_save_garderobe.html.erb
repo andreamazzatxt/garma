@@ -3,9 +3,11 @@
     <%= link_to garderobe_item_path(), method: :delete do %>
       <%= render 'icons/heart_icon' %>
     <% end %>
+    <p>Saved!</p>
   <% else %>
     <%= link_to product_garderobe_items_path(product), method: :post, remote: true do %>
       <%= render 'icons/heart_icon_disabled' %>
     <% end %>
+    <p>Save product</p>
   <% end %>
 </div>

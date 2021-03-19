@@ -1,0 +1,9 @@
+
+<div class="leaf-container">
+  <% rating.times do %>
+    <%= render 'icons/leaf_icon_active', width: 20, height: 20 %>
+  <% end %>
+  <% (5-rating).times do %>
+  <%= render 'icons/leaf_icon_disabled', width: 20, height: 20 %>
+  <% end %>
+</div>
