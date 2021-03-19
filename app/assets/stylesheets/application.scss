@@ -34,3 +34,7 @@ a:hover {
   text-decoration: none;
   color: $text-color;
 }
+
+:root {
+  --animate-delay: 0.5s;
+}

@@ -8,6 +8,7 @@
 
 .header-section {
   height:150px;
+  padding-top: 2.5rem;
   margin: 15px 10px 0px 15px;
   display: flex;
   align-items: flex-start;
@@ -15,6 +16,7 @@
 }
 
 .search {
+  padding: 20px 0;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -22,16 +24,19 @@
 }
 
 .search-bar {
-  width:80vw;
+  width: 330px;
+  height: 40px;
   border-radius: 20px;
-  padding: 10px 30px 10px 10px;
-  border: 2px solid #06436F;
+  padding: 10px 10px 10px 20px;
+  background: #FFFFFF;
+  box-shadow: inset 0px 1px 6px 2px rgba(0, 0, 0, 0.25);
+  border: none;
 }
 
 .close-icon {
   position:absolute;
-  left:79%;
-  top: 30%;
+  left:82%;
+  top: 36%;
 }
 
 .brand-selection {
@@ -42,14 +47,25 @@
 }
 
 .brand-card {
-  height: 120px;
-  width: 120px;
-  background-color: white;
+  height: 140px;
+  width: 140px;
+  background: #F7F7F7;
+  border-radius: 20px;
   padding: 20px;
   box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
-  border-radius: 4px;
   margin: 20px 0px;
+  position:relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  filter: drop-shadow(1px 5px 16px rgba(0, 0, 0, 0.25));
+  p {
+    font-weight: 400;
+    position: absolute;
+    top:115px;
+  }
+  img {
+    border-radius: 20px;
+  }
   }

@@ -1,3 +1,5 @@
-<div>
-  <%= cl_image_tag picture, class: 'avatar', height: 70, width: 70, crop: :fill %>
-</div>
+<% if current_user %>
+  <div class="header-picture">
+    <%= cl_image_tag current_user.photo.key, class: 'avatar', height: 60, width: 60, crop: :fill, gravity: :face %>
+  </div>
+<% end %>
