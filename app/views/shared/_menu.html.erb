@@ -1,28 +1,30 @@
 <div id="menu-footer" class="menu-footer">
-
+  <!-- SEARCH LINK -->
   <%= link_to brands_path do %>
-    <div class="menu-button">
-      <div class="menu-inner-shadow">
-        <%= render 'icons/search_icon' , width: 20, height: 20 %>
-      </div>
+    <div class="icon-wrapper-menu">
+      <%= render 'icons/search_icon'%>
     </div>
   <% end %>
-
-  <div class="menu-button">
-    <div class="menu-inner-shadow">
-      <%= render 'icons/garderobe_icon' , width: 20, height: 20 %>
-    </div>
+  <!-- GUARDROBE LINK -->
+  <% if current_user %>
+    <%= link_to user_products_path(current_user) do %>
+      <div class="icon-wrapper-menu">
+        <%= render 'icons/garderobe_icon'%>
+      </div>
+    <% end %>
+  <% else %>
+    <%= link_to  new_user_session_path do %>
+      <div class="icon-wrapper-menu">
+        <%= render 'icons/garderobe_icon' %>
+      </div>
+    <% end %>
+  <% end %>
+  <!-- USER LINK -->
+  <div class="icon-wrapper-menu">
+    <%= render 'icons/user_icon'%>
   </div>
-
-  <div class="menu-button">
-    <div class="menu-inner-shadow">
-      <%= render 'icons/user_icon' , width: 20, height: 20 %>
-    </div>
-  </div>
-
-  <div class="menu-button">
-    <div class="menu-inner-shadow">
-      <%= render 'icons/hamburger_icon', width: 20, height: 20 %>
-    </div>
+  <!-- MENU LINK -->
+  <div class="icon-wrapper-menu">
+    <%= render 'icons/hamburger_icon'%>
   </div>
 </div>

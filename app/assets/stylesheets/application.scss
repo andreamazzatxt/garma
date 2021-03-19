@@ -11,6 +11,7 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "products/index";
 
 
 body{
@@ -19,7 +20,15 @@ body{
 
 @import "brands/index";
 
-html{
-  scroll-behavior: smooth;
+// html{
+//   scroll-behavior: smooth;
+// }
+
+a {
+  color: $text-color;
 }
 
+a:hover {
+  text-decoration: none;
+  color: $text-color;
+}

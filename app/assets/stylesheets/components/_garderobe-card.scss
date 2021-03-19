@@ -1,0 +1,36 @@
+.garderobe-card{
+  background: #F7F7F7;
+  border-radius: 20px;
+  width: 350px;
+  height: 127.6px;
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  img {
+    margin-left: 20px;
+    height: 89px;
+    width: 89px;
+    border-radius: 20px;
+    object-fit: cover;
+  }
+
+}
+
+.garderobe-leaf-container {
+  width: 100px;
+}
+
+.garderobe-card-info {
+  line-height: 0;
+  padding-left: 20px;
+  height: 89px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.garderobe-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+}
