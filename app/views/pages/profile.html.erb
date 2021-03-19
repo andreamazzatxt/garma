@@ -1,9 +1,10 @@
 <div class="mobile-container">
 
 
+<div class="user-info-div">
 
-
-<div class="profile-hero">
+<% if user_signed_in? %>
+ <div class="profile-hero">
     <%= render 'components/avatar_square', picture:current_user.photo.key %>
     <div class="fullname">
       <h1>Hi</h1>
@@ -18,22 +19,24 @@
 
     <li class="list-item">
       <div class="icon-div">
-        <%= render 'icons/user_icon'%>
+        <%= render 'icons/garderobe_icon'%>
       </div>
-        <h3>Username</h3>
+        <h5>Saved items: <%= current_user.garderobe_items.count %> </h5>
     </li>
+
 
     <li class="list-item">
       <div class="icon-div">
         <%= render 'icons/mail_icon'%>
       </div>
-        <h3>Email</h3>
+        <h5>Email</h5>
     </li>
+
     <li class="list-item">
       <div class="icon-div">
         <%= render 'icons/birthday_icon'%>
       </div>
-        <h3>Birthday</h3>
+        <h5>Birthday</h5>
     </li>
 
 
@@ -41,28 +44,30 @@
       <div class="icon-div">
         <%= render 'icons/gender_icon'%>
       </div>
-      <h3>Gender</h3>
+      <h5>Gender</h5>
     </li>
+
   </ul>
+</div>
+
+
+
+<% end %>
 
 </div>
 
 
 
-<button class="button-menu">
-  <div class="button-content">
-    <div class="circle">
+<div class="buttons-container">
 
-    </div>
-    <h4>some text</h4>
-  </div>
-</button>
+  <%= render 'components/profile_button', text:'ciao' %>
+  <%= render 'components/profile_button', text:'bye' %>
+  <%= render 'components/profile_button', text:'cjjjjj' %>
+  <%= render 'components/profile_button', text:'ciao' %>
 
-
-
-<div class="options">
-  <%= render 'components/profile_button'%>
 </div>
+
+
 
 
 
