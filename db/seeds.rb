@@ -20,6 +20,18 @@ picture = URI.open('https://cdn.nohat.cc/thumb/f/720/comrawpixel541200.jpg')
 olivia.photo.attach(io: picture, filename: 'olivia.jpg', content_type: 'image/jpg')
 olivia.save!
 
+andrea = User.new(
+  email: 'andreamazza89@gmail.com',
+  password: 'password',
+  first_name: 'Andrea',
+  last_name: 'Mazza',
+  birthday: '21/11/1989',
+  gender: 'male'
+  )
+picture = URI.open('https://res.cloudinary.com/djeuk9059/image/upload/v1616164519/IMG_0413_ngbdoh.jpg')
+andrea.photo.attach(io: picture, filename: 'andrea.jpg', content_type: 'image/jpg')
+andrea.save!
+
 puts 'Users seed done! 💪'
 
 # GENERATE FABRICS INSTANCES

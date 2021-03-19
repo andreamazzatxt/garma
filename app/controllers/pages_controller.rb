@@ -8,5 +8,6 @@ class PagesController < ApplicationController
   end
 
   def profile
+    @disable_avatar = true
   end
 end
