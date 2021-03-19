@@ -30,14 +30,14 @@
       <div class="icon-div">
         <%= render 'icons/mail_icon'%>
       </div>
-        <h5>Email</h5>
+        <h5><%= current_user.email %></h5>
     </li>
 
     <li class="list-item">
       <div class="icon-div">
         <%= render 'icons/birthday_icon'%>
       </div>
-        <h5>Birthday</h5>
+        <h5><%= current_user.birthday %></h5>
     </li>
 
 
@@ -45,7 +45,7 @@
       <div class="icon-div">
         <%= render 'icons/gender_icon'%>
       </div>
-      <h5>Gender</h5>
+      <h5><%= current_user.gender %></h5>
     </li>
 
   </ul>

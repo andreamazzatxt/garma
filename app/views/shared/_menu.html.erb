@@ -20,11 +20,15 @@
     <% end %>
   <% end %>
   <!-- USER LINK -->
-  <div class="icon-wrapper-menu">
-    <%= render 'icons/user_icon'%>
-  </div>
+  <%= link_to profile_path do %>
+    <div class="icon-wrapper-menu">
+      <%= render 'icons/user_icon'%>
+    </div>
+  <% end %>
   <!-- MENU LINK -->
-  <div class="icon-wrapper-menu">
-    <%= render 'icons/hamburger_icon'%>
-  </div>
+  <%= link_to profile_path do %>
+    <div class="icon-wrapper-menu">
+      <%= render 'icons/hamburger_icon'%>
+    </div>
+  <% end %>
 </div>
