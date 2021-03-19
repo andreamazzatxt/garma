@@ -2,6 +2,8 @@
 
 <div class="mobile-container">
 
+  <% @disable_avatar = true %>
+
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
