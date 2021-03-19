@@ -23,6 +23,9 @@ import "bootstrap";
 import { BrowserMultiFormatReader } from '@zxing/library';
 import { startScanner } from '../plugins/scan'
 import { accordion } from '../plugins/accordion'
+import { initFlatpickr } from "../plugins/flatpickr";
+
+initFlatpickr();
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
