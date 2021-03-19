@@ -9,7 +9,7 @@
     <!-- avatar -->
     <div>
       <% if current_user %>
-        <%= cl_image_tag current_user.photo.key, class: 'avatar', height: 70, width: 70, gravity:"faces", crop: :fill %>
+         <%= render 'components/avatar', picture:current_user.photo.key %>
       <% end %>
     </div>
   </div>

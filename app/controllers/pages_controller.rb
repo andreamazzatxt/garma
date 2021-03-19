@@ -5,5 +5,8 @@ class PagesController < ApplicationController
     @disable_nav = true
     @example = Product.first
   end
+
+  def profile
+  end
 end
 

@@ -1,0 +1,51 @@
+.profile-hero{
+  background-color:yellow;
+  display:flex;
+  justify-content:space-around;
+  padding-top:3rem;
+  .fullname{
+    margin-right:1rem;
+  }
+}
+
+.profile-info{
+  display:flex;
+  flex-direction:flex-start;
+  width:100%;
+  background-color:pink;
+  padding-top:3rem;
+}
+
+.user-list{
+  list-style-type:none;
+  width:80%;
+  .list-item{
+    display:flex;
+    margin-bottom:.5rem;
+    .icon-div{
+      width:60px
+    }
+    h3{
+      margin-left: 1rem;
+    }
+  }
+}
+
+.button-menu{
+  width:80%;
+  margin:0 auto;
+  padding: 30px auto;
+  border-radius:20px;
+  .button-content{
+    display:flex;
+    justify-content:flex-start;
+    margin:1rem auto;
+    align-items:center;
+  }
+  .circle{
+    width:30px;
+    height: 30px;
+    border-radius:50%;
+    background-color:gray;
+  }
+}
