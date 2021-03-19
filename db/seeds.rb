@@ -53,7 +53,7 @@ end
 # ATTACHING PHOTOS
 
 patagonia = Brand.find_by(name: "Patagonia")
-picture = URI.open('https://1000logos.net/wp-content/uploads/2017/11/Patagonia-Logo.png')
+picture = URI.open('https://res.cloudinary.com/djeuk9059/image/upload/v1616159085/patagonia_etmaqp.png')
 patagonia.photo.attach(io: picture, filename: 'brand-logo-patagonia.jpg', content_type: 'image/png')
 
 nike = Brand.find_by(name: "Nike")
@@ -61,7 +61,7 @@ picture = URI.open('https://play-lh.googleusercontent.com/eLqKK4MkDoXXbD_F3A_2rs
 nike.photo.attach(io: picture, filename: 'brand-logo-nike.jpg', content_type: 'image/webp')
 
 hm = Brand.find_by(name: "HM")
-picture = URI.open('https://play-lh.googleusercontent.com/e7M61dxjxDtLLALsqUR3c6yDKsSNljmyK8gt6M22luXPjeA50JiPA185wLLt-P9iDTNZ')
+picture = URI.open('https://res.cloudinary.com/djeuk9059/image/upload/v1616159123/hm_enoekn.png')
 hm.photo.attach(io: picture, filename: 'brand-logo-hm.jpg', content_type: 'image/webp')
 
 zara = Brand.find_by(name: "Zara")

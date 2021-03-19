@@ -6,7 +6,7 @@
   justify-content:center;
   flex-direction:column;
   text-align: center;
-  padding:2rem 2.1rem .2rem ;
+  padding:2.5rem 2.1rem .2rem ;
   // background-color:yellow;
   margin:0 auto;
   width:100%;
@@ -97,7 +97,7 @@ button{
   display:flex;
   justify-content:center;
   align-items:center;
-  // background-color:gray;
+  background-color: transparent;
   margin:0 auto 3rem;
 }
 
@@ -112,3 +112,11 @@ button{
 
 }
 
+#arrow {
+  color: #6AE29C;
+}
+
+#arrow-close {
+  color: #6AE29C;
+  background-color: transparent;
+}
