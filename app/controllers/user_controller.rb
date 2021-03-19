@@ -1,7 +1,7 @@
 class UserController < ApplicationController
   def update
     @user.update(user_params)
-    redirect_to _path(@user.id)
+    redirect_to profile_path(@user.id)
   end
 
   def destroy
