@@ -30,3 +30,22 @@
     }
   }
 }
+
+.button-menu{
+  width:80%;
+  margin:0 auto;
+  padding: 30px auto;
+  border-radius:20px;
+  .button-content{
+    display:flex;
+    justify-content:flex-start;
+    margin:1rem auto;
+    align-items:center;
+  }
+  .circle{
+    width:30px;
+    height: 30px;
+    border-radius:50%;
+    background-color:gray;
+  }
+}
