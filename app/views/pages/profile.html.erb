@@ -37,7 +37,7 @@
       <div class="icon-div">
         <%= render 'icons/birthday_icon'%>
       </div>
-        <h5><%= current_user.birthday %></h5>
+        <h5><%= current_user.birthday.to_formatted_s(:rfc822) %></h5>
     </li>
 
 
@@ -84,7 +84,7 @@
       <%= render 'components/profile_button', text:'My Garderobe' %>
     <% end %>
 
-    <%= link_to root_path , class:'profile-button' do %>
+    <%= link_to destroy_user_session_path, method: 'delete', class:'profile-button' do %>
       <%= render 'components/profile_button', text:'Logout' %>
     <% end %>
 

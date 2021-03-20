@@ -2,7 +2,7 @@ class BrandsController < ApplicationController
   skip_before_action :authenticate_user!
   skip_before_action :verify_authenticity_token, only: [:search]
   def index
-      if params[:query].present?
+    if params[:query].present?
       @brands = Brand.search_by_brand_name(params[:query])
     else
       @brands = Brand.all

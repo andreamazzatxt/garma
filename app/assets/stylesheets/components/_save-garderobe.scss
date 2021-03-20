@@ -1,5 +1,4 @@
 .save-container {
-  transition: 200ms;
   margin-top:20px;
   padding: 80px 0;
   display: flex;
@@ -13,6 +12,19 @@
   }
 }
 
-.save-container:active {
-  transform: scale(0.8)
+#heart {
+  display: block;
+  transition-duration: 200ms;
 }
+
+.heart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.off {
+  display: none;
+}
+

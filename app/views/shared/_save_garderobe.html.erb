@@ -1,13 +1,13 @@
 <div id="save-container" class="save-container">
-  <% if saved %>
-    <%= link_to garderobe_item_path(), method: :delete do %>
-      <%= render 'icons/heart_icon' %>
-    <% end %>
-    <p>Saved!</p>
-  <% else %>
-    <%= link_to product_garderobe_items_path(product), method: :post, remote: true do %>
-      <%= render 'icons/heart_icon_disabled' %>
-    <% end %>
-    <p>Save product</p>
-  <% end %>
+    <div id="heart" data-saved="<%= saved %>" data-id="<%= @product.id %>" data-garderobe-id="<%= @product.garderobe_id(current_user) %>"></div>
+    <div class="off">
+      <div id="heart-on" class="heart">
+        <%= render 'icons/heart_icon' %>
+        <p>Saved!</p>
+      </div>
+      <div id="heart-off" class="heart">
+        <%= render 'icons/heart_icon_disabled'%>
+        <p>Save product</p>
+      </div>
+    </div>
 </div>

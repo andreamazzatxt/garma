@@ -1,17 +1,17 @@
 class GarderobeItemsController < ApplicationController
+  skip_before_action :verify_authenticity_token
   def create
     @product = Product.find(params[:product_id].to_i)
     item = GarderobeItem.new(product: @product, user: current_user)
-    if item.save
-      redirect_to product_path(@product, anchor: 'save-container')
-    end
+    render json: { id: item.id } if item.save
   end
 
   def destroy
-    @product = Product.find(params[:id].to_i)
-    item = GarderobeItem.find_by(product: @product, user: current_user)
-    if item.destroy
-      redirect_to product_path(@product, anchor: 'save-container')
+    item = GarderobeItem.find(params[:id])
+    if item.user == current_user
+      render json: { status: 'deleted' } if item.destroy
+    else
+      render json: { status: 'rejected' }
     end
   end
 end

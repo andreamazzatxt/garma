@@ -20,12 +20,14 @@ ActiveStorage.start()
 
 // External imports
 import "bootstrap";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { BrowserMultiFormatReader } from '@zxing/library';
 import { startScanner } from '../plugins/scan'
 import { accordion } from '../plugins/accordion'
 import { initFlatpickr } from "../plugins/flatpickr";
-
-initFlatpickr();
+import { heartSave } from "../plugins/heart";
+import { flashTimer } from "../plugins/flashes";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -35,4 +37,8 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
     startScanner();
     accordion();
+    initFlatpickr();
+    heartSave();
+    flashTimer();
+    AOS.init();
 });
