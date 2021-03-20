@@ -1,14 +1,12 @@
-
-const wrappers = document.querySelectorAll('.product-card-wrapper')
-
-
+  // move wrappers declaration inside accordion function beacouse it was causing
+  // the function not to work when redirecting from other pages
   const accordion = () => {
-
+  const wrappers = document.querySelectorAll('.product-card-wrapper')
     if (wrappers){
+      console.log('Accordion loaded')
        wrappers.forEach((wrapper) => {
         const card = wrapper.querySelector('.product-card')
         const closeBtn = wrapper.querySelector('.arrow-open-close')
-
       card.addEventListener('click',()=>{
         const content = wrapper.querySelector('.product-content')
         const arrow = wrapper.querySelector('#arrow')
