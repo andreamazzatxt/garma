@@ -1,4 +1,4 @@
-<div class="mobile-container">
+<div class="mobile-container ">
 
   <!--------------------------product hero section------------------------------------>
   <div class="product-title">
@@ -21,7 +21,7 @@
 
 
 
-<div class="product-card-wrapper">
+<div class="product-card-wrapper" data-aos="fade-left">
   <!--------------------------brand section------------------------------------>
 <%= render '/components/product-card' , title: 'Brand', field_icon:'brand_icon', rating: @product.brand.rating %>
 <!-- section to hide -->
@@ -142,9 +142,7 @@
     <div class="description-article">
       <% @product.suppliers.each do |supplier| %>
       <h3>Made in <%= supplier.country %></h3>
-      <p>From:</p>
       <h4><%= supplier.name %></h4>
-      <p>Description:</p>
 
       <!-- to fill with informations -->
 

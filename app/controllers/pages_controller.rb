@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [:home, :profile]
 
   def home
     @disable_nav = true
@@ -8,5 +8,6 @@ class PagesController < ApplicationController
   end
 
   def profile
+    @disable_avatar = true
   end
 end
