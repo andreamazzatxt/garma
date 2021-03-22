@@ -93,12 +93,13 @@
     <%= link_to brands_index_path ,class:'profile-button' do %>
       <%= render 'components/profile_button', text:'Store Locator' %>
     <% end %>
-
-  <% if !user_signed_in? %>
-    <%= link_to new_user_session_path, class:'profile-button' do %>
-      <%= render 'components/profile_button', text:'Sign up' %>
+    <a class="profile-button" id="install-button">
+        <%= render 'components/profile_button', text:'Install App' %>
+    </a>
+    <% if !user_signed_in? %>
+      <%= link_to new_user_session_path, class:'profile-button' do %>
+        <%= render 'components/profile_button', text:'Sign up' %>
     <% end %>
-
   <% end %>
 
 </div>
