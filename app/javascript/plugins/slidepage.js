@@ -177,10 +177,10 @@ function SLIDEPAGE(options) {
             self.direction = options.direction;
         }
         if (options.transition && typeof options.transition === "number") {
-            this.transition = options.transition;
+            self.transition = options.transition;
         }
         if (options.display) {
-            this.display = options.display;
+            self.display = options.display;
         }
         if (options.realNumber) {
             self.realNumber = true;
@@ -200,3 +200,4 @@ function SLIDEPAGE(options) {
         priv.loadCSS();
     })();
 }
+export { SLIDEPAGE };

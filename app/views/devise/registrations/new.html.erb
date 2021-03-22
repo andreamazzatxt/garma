@@ -15,22 +15,26 @@
                     required: true,
                     autofocus: true,
                     input_html: { autocomplete: "last_name"} %>
-        <button onclick="sp.next()">NEXT</button>
+      <button type="button" onclick="sp.next()">Next</button>
       </div>
+
       <div class="sp_page">Page 2
         <%= f.input :email,
                     required: true,
                     autofocus: true,
                     input_html: { autocomplete: "email" }%>
-        <button onclick="sp.prev()">PREV</button>
-        <button onclick="sp.next()">NEXT</button>
+        <button type="button" onclick="sp.prev()">Back</button>
+        <button type="button" onclick="sp.next()">Next</button>
       </div>
+
       <div class="class sp_page">Page 3
         <%= f.input :birthday,
                     required: true,
                     as: :string,
                     autofocus: true,
                     input_html: {class: "datepicker"} %>
+        <button type="button" onclick="sp.prev()">Back</button>
+        <button type="button" onclick="sp.next()">Next</button>
       </div>
       <div class="class sp_page">Page 4
         <%= f.input :gender,
@@ -38,6 +42,8 @@
                     collection: ['female', 'male', 'other'],
                     autofocus: true,
                     input_html: { autocomplete: "gender" }%>
+        <button type="button" onclick="sp.prev()">Back</button>
+        <button type="button" onclick="sp.next()">Next</button>
       </div>
       <div class="sp_page">Page 5
         <%= f.input :password,
@@ -47,13 +53,16 @@
         <%= f.input :password_confirmation,
                     required: true,
                     input_html: { autocomplete: "new-password" } %>
+        <button type="button" onclick="sp.prev()">Back</button>
+        <button type="button" onclick="sp.next()">Next</button>
       </div>
-      <div class="class sp_page">Page 6
+      <div class="class sp_page">
         <%= f.input :photo,
                     as: :file,
-                    input_html: { multiple: false }
-            f.button :submit, "Sign up" %>
+                    input_html: { multiple: false } %>
+      <div><button type="submit">Send</button></div>
       </div>
+
       <div class="class sp_page">Page 7
        <h1>You are now registered!</h1>
       </div>

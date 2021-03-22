@@ -25,7 +25,7 @@ import { startScanner } from '../plugins/scan'
 import { accordion } from '../plugins/accordion'
 import { initFlatpickr } from "../plugins/flatpickr";
 import { SLIDEPAGE } from '../plugins/slidepage';
-import { SLIDEPAGE } from '../plugins/slidepage.min';
+import { initSlidePage } from '../components/slide';
 
 
 initFlatpickr();
@@ -38,4 +38,5 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
     startScanner();
     accordion();
+    initSlidePage();
 });
