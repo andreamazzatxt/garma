@@ -13,9 +13,10 @@
         <%= render 'components/avatar_square', picture:current_user.photo.key %>
       </div>
 
-      <%= f.input :change_photo ,
+      <%= f.input :change_photo,
       as: :file,
-      input_html: { multiple: false } %>
+      input_html: { multiple: false },
+      label_html: { class:'garma-btn-primary margin-right-3' } %>
     </div>
 
 
