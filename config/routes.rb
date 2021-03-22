@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   resources :brands, only: [:index] do
     member do
       get 'scan/', to: 'brands#scan', as: 'scan'
+      get 'type/', to: 'brands#type', as: 'type'
       post 'search'
+      post 'type_search'
     end
   end
   resources :products, only: [:show] do

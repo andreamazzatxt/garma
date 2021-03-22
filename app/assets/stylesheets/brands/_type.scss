@@ -1,0 +1,34 @@
+.type-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.type-central {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  width: 80vw;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 100px;
+}
+
+.type-label {
+  position: absolute;
+  top: 55%;
+  left: 76%;
+}
+.type-textfield {
+  background: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 4px solid $text-color;
+  font-size: 2rem;
+  color: $text-color;
+  text-align: center;
+}
