@@ -4,7 +4,7 @@
     <%= render 'icons/search_watermark' %>
     <%= form_with url: "/brands/#{@brand.id}/type_search", method: :post do |form| %>
       <%= form.text_field :barcode, class: "type-textfield" %>
-      <%= form.submit  class: 'type-submit' %>
+      <%= form.submit 'Search', class: 'garma-btn-primary' %>
     <% end %>
   </div>
 </div>

@@ -1,4 +1,5 @@
-<div id="save-container" class="save-container">
+<% if current_user %>
+  <div id="save-container" class="save-container">
     <div id="heart" data-saved="<%= saved %>" data-id="<%= @product.id %>" data-garderobe-id="<%= @product.garderobe_id(current_user) %>"></div>
     <div class="off">
       <div id="heart-on" class="heart">
@@ -10,4 +11,5 @@
         <p>Save product</p>
       </div>
     </div>
-</div>
+  </div>
+<% end %>
