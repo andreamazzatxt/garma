@@ -1,4 +1,6 @@
-const { environment } = require('@rails/webpacker')
+const { config, environment, Environment } = require('@rails/webpacker');
+const WebpackerPwa = require('webpacker-pwa');
+new WebpackerPwa(config, environment);
 
 const webpack = require('webpack');
 // Preventing Babel from transpiling NodeModules packages

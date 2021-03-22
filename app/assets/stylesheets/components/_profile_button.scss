@@ -1,25 +1,33 @@
 .profile-button{
-  width:85%;
+  width: 300px;
+  height: 45px;
   margin:0 auto 1rem auto;
-  padding: 25px auto;
   border-radius:20px;
+  display: flex;
+  background-color:white;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   color: $text-color;
   .button-content{
     display:flex;
     justify-content:flex-start;
-    margin:.7rem auto;
     align-items:center;
   }
   .circle{
     width:30px;
     height: 30px;
-    border-radius:80%;
+    border-radius:50%;
     margin-left: 0.5rem;
     margin-right:1rem;
-    background-color:gray;
+    background-color:transparent;
   }
   h3{
+    font-weight: 200;
+    font-size: 22px;
+    color: $text-color;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.1);
     margin:0;
+    background: linear-gradient(180deg, #6AE29C 0%, #4EC5EF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

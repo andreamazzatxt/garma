@@ -1,7 +1,12 @@
-class UserController < ApplicationController
+class UsersController < ApplicationController
   def update
     @user.update(user_params)
     redirect_to profile_path(@user.id)
+  end
+
+  def edit
+    @user = User.find(params[:id])
+    redirect_to edit_user_registration_path(@user.id)
   end
 
   def destroy

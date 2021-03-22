@@ -22,4 +22,9 @@ class Product < ApplicationRecord
   def total_rating
     return ((brand.rating + fabrics_rating + suppliers_rating) / 3).round
   end
+
+  def garderobe_id(user)
+    item = GarderobeItem.find_by(user: user, product: self)
+    item.nil? ? 'false' : item.id
+  end
 end
