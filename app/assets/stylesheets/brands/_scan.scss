@@ -40,8 +40,8 @@
 }
 
 .scan-button-container {
+  width: 100vw;
   bottom: 3%;
-  left: 5%;
   position: absolute;
   display: flex;
   flex-flow: column;
@@ -50,8 +50,13 @@
 }
 
 .scan-close-icon {
-  font-size: 2rem;
   line-height: 0;
+  i {
+    font-size: 2rem;
+    background: linear-gradient(180deg, #6AE29C 0%, #4EC5EF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 .scan-hide {
