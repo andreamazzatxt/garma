@@ -3,7 +3,10 @@
   display:flex;
   justify-content:flex-start;
   padding-top:3rem;
+  align-items:center;
+  width:100%;
   padding-left: 2rem;
+  padding-right: 2rem;
   .fullname{
     margin-left:1rem;
   }
@@ -34,5 +37,8 @@
 .margin-for-menu{
   height:4rem;
 }
-
+.margin-right-3{
+  margin-right: 2rem;
+  transform: translateY(1rem);
+}
 
