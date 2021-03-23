@@ -74,4 +74,7 @@ config.active_storage.service = :cloudinary
 
   # Uncomment if you wish to allow Action Cable access from any origin.
   # config.action_cable.disable_request_forgery_protection = true
+ config.hosts << "fast-badger-50.loca.lt"
+
 end
+

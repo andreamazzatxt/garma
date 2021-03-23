@@ -1,54 +1,79 @@
 <div class="container-login">
-<h1>Sign up</h1>
+  <h1>Sign up</h1>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
-
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= f.error_notification %>
 
     <div class="form-inputs">
       <div class="app">
-      <div class="sp_page">
-        <%= f.input :first_name,
+        <div class="sp_page">
+          <div class="login-icons">
+            <!-- icon you can see -->
+            <%= render 'icons/picture_icon', width: 70, height: 150%>
+          </div>
+          <%= f.input :first_name,
                     required: true,
                     autofocus: true,
                     input_html: { autocomplete: "first_name"} %>
-        <%= f.input :last_name,
+          <%= f.input :last_name,
                     required: true,
                     autofocus: true,
                     input_html: { autocomplete: "last_name"} %>
-        <div class="container-button">
-          <button type="button" class="garma-btn-primary" onclick="sp.next()">Next</button><%= render "devise/shared/links"%>
+          <div class="container-button">
+            <%= render "devise/shared/links"%>
+            <button type="button" class="garma-btn-primary" onclick="sp.next()">Next</button>
+          </div>
         </div>
-      </div>
 
-      <div class="sp_page">
-        <%= f.input :email,
+        <div class="sp_page">
+          <div class="login-icons">
+            <!-- icon you NOT see -->
+            <%= render 'icons/mail_icon', width: 70, height: 150%>
+          </div>
+          <%= f.input :email,
                     required: true,
                     autofocus: true,
                     input_html: { autocomplete: "email" }%>
-        <button type="button" class="garma-btn-primary" onclick="sp.prev()">Back</button>
-        <button type="button" class="garma-btn-primary" onclick="sp.next()">Next</button>
+          <div class="container-button">
+            <button type="button" class="garma-btn-secondary" onclick="sp.prev()">Back</button>
+            <button type="button" class="garma-btn-primary" onclick="sp.next()">Next</button>
+          </div>
       </div>
 
       <div class="class sp_page">
+        <div class="login-icons">
+          <%= render 'icons/birthday_icon', width: 70, height: 150%>
+        </div>
         <%= f.input :birthday,
                     required: true,
                     as: :string,
                     autofocus: true,
                     input_html: {class: "datepicker"} %>
-        <button type="button" class="garma-btn-primary" onclick="sp.prev()">Back</button>
-        <button type="button" class="garma-btn-primary" onclick="sp.next()">Next</button>
+        <div class="container-button">
+          <button type="button" class="garma-btn-secondary" onclick="sp.prev()">Back</button>
+          <button type="button" class="garma-btn-primary" onclick="sp.next()">Next</button>
+        </div>
       </div>
+
       <div class="class sp_page">
+        <div class="login-icons">
+          <%= render 'icons/gender_icon', width: 70, height: 150%>
+        </div>
         <%= f.input :gender,
                     required: true,
                     collection: ['female', 'male', 'other'],
                     autofocus: true,
                     input_html: { autocomplete: "gender" }%>
-        <button type="button" class="garma-btn-primary" onclick="sp.prev()">Back</button>
-        <button type="button" class="garma-btn-primary" onclick="sp.next()">Next</button>
+        <div class="container-button">
+          <button type="button" class="garma-btn-secondary" onclick="sp.prev()">Back</button>
+          <button type="button" class="garma-btn-primary" onclick="sp.next()">Next</button>
+        </div>
       </div>
+
       <div class="sp_page">
+        <div class="login-icons">
+          <%= render 'icons/password_icon', width: 70, height: 150%>
+        </div>
         <%= f.input :password,
                     required: true,
                     hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
@@ -56,18 +81,33 @@
         <%= f.input :password_confirmation,
                     required: true,
                     input_html: { autocomplete: "new-password" } %>
-        <button type="button" class="garma-btn-primary" onclick="sp.prev()">Back</button>
-        <button type="button" class="garma-btn-primary" onclick="sp.next()">Next</button>
-      </div>
-      <div class="class sp_page">
-        <%= f.input :photo,
-                    as: :file,
-                    input_html: { multiple: false } %>
-      <div><button type="submit" class="garma-btn-primary">Send</button></div>
+        <div class="container-button">
+          <button type="button" class="garma-btn-secondary" onclick="sp.prev()">Back</button>
+          <button type="button" class="garma-btn-primary" onclick="sp.next()">Next</button>
+        </div>
       </div>
 
       <div class="class sp_page">
-       <h1>You are now registered!</h1>
+        <div class="login-icons">
+          <%= render 'icons/user_icon_svg'%>
+          <%= f.input :photo,
+                    :label => 'Upload your photo!',
+                    label_html: { class:'garma-btn-secondary margin-left-5' },
+                    as: :file,
+                    input_html: { multiple: false } %>
+        </div>
+        <div class="container-button">
+          <button type="button" class="garma-btn-secondary" onclick="sp.prev()">Back</button>
+          <button type="submit" class="garma-btn-primary">Send</button>
+        </div>
+      </div>
+
+      <div class="class sp_page">
+        <div class="login-icons">
+         <%= render 'icons/success_icon'%>
+          <h1>You are now registered!</h1>
+          <button type="button" class="garma-btn-primary" onclick="window.location.href='./brands';">Go to Garma</button>
+        </div>
       </div>
     </div>
   </div>
