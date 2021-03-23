@@ -14,6 +14,7 @@
 @import "components/index";
 @import "pages/index";
 @import "products/index";
+@import "pages/signup";
 
 
 body{
@@ -40,3 +41,4 @@ a:hover {
 :root {
   --animate-delay: 0.5s;
 }
+

@@ -26,6 +26,8 @@ import { BrowserMultiFormatReader } from '@zxing/library';
 import { startScanner } from '../plugins/scan'
 import { accordion } from '../plugins/accordion'
 import { initFlatpickr } from "../plugins/flatpickr";
+import { SLIDEPAGE } from '../plugins/slidepage';
+import { initSlidePage } from '../components/slide';
 import { heartSave } from "../plugins/heart";
 import { installPWA } from "../plugins/install";
 import { flashTimer } from "../plugins/flashes";
@@ -56,6 +58,7 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
     startScanner();
     accordion();
+    initSlidePage();
     initFlatpickr();
     heartSave();
     flashTimer();
