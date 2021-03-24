@@ -1,6 +1,5 @@
 import { BrowserMultiFormatReader } from '@zxing/library';
 
-
 const searchBarcode = (barcode) => {
   const id = document.getElementById('scanner-container').dataset.brandId
   fetch(`/brands/${id}/search`, {
@@ -31,6 +30,7 @@ const startScanner = () => {
   const exit = document.getElementById('scan-exit')
   let selectedDeviceId;
   if (videoWrapper){
+      const scanBar = document.getElementById('scan-bar');
       // AddEventListener to show the focus bar only when the video stream is loaded
       video.addEventListener('loadstart', () => {
         videoWrapper.classList.remove('scan-hide');
@@ -43,6 +43,14 @@ const startScanner = () => {
               // start.addEventListener('click', () => {
 
                   scanner.decodeOnceFromVideoDevice(selectedDeviceId, 'video').then((result) => {
+                      scanBar.style.border = 'none';
+                      scanBar.innerHTML = `<div class="loadingio-spinner-spin-z8vzunaf1xh"><div class="ldio-rzsp2ql3h2">
+                      <div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div><div><div></div></div>
+                      </div></div>`;
+                      setTimeout(() => {
+                        scanner.reset();
+                        searchBarcode(result);
+                      }, 1500)
                       scanner.reset();
                       searchBarcode(result);
                   }).catch((err) => {
