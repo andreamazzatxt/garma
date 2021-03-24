@@ -6,29 +6,22 @@
     </div>
   <% end %>
   <!-- GUARDROBE LINK -->
-  <% if current_user %>
-    <%= link_to user_products_path(current_user) do %>
+    <%= link_to user_products_path(current_user.nil? ? 0 : current_user) do %>
       <div class="icon-wrapper-menu">
         <%= render 'icons/garderobe_icon_inset'%>
       </div>
     <% end %>
-  <% else %>
-    <%= link_to  new_user_session_path do %>
-      <div class="icon-wrapper-menu">
-        <%= render 'icons/garderobe_icon_inset' %>
-      </div>
-    <% end %>
-  <% end %>
+
   <!-- USER LINK -->
   <%= link_to profile_path do %>
     <div class="icon-wrapper-menu">
       <%= render 'icons/user_icon_svg_menu'%>
     </div>
   <% end %>
-  <!-- MENU LINK -->
-  <%= link_to profile_path do %>
+  <!-- ABOUT LINK -->
+  <%= link_to about_path do %>
     <div class="icon-wrapper-menu">
-      <%= render 'icons/hamburger_icon'%>
+      <%= render 'icons/garma_button_icon'%>
     </div>
   <% end %>
 </div>

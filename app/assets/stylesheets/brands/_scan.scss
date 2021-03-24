@@ -6,6 +6,11 @@
   overflow:hidden;
 }
 
+.blurred-back {
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(2px);
+}
+
 .video-wrapper {
   height: 100% !important;
   width: auto !important;
