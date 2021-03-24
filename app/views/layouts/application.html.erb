@@ -15,7 +15,10 @@
 
   <body>
     <%= render 'shared/flashes' %>
-    <%= render 'components/avatar' unless @disable_avatar %>
+
+    <%= link_to profile_path do %>
+      <%= render 'components/avatar' unless @disable_avatar %>
+    <% end %>
       <%= yield %>
     <%= render 'shared/menu' unless @disable_nav %>
   </body>
