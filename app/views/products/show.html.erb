@@ -1,10 +1,11 @@
 <% content_for :head do %>
-  <title><%= @product.name %> | Garma</title>
+  <title><%= @product.name %> | Garma App</title>
   <meta name="robots" content="index, follow" />
   <meta name="description" content="<%= @product.name %> details for ecosustainability and impact on the planet"/>
   <meta property="og:title" content="find more information about the sustainability of <%= @product.name %>"/>
   <meta property="og:description" content="<%= @product.name %> details for ecosustainability and impact on the planet"/>
   <meta property="og:site_name" content="Garma">
+  <meta property="og:type" content="website" />
   <meta name="og:image" content='<%= @product.photo_url %>'>
   <meta property="og:url" content="https://www.garma.app/products/<%= @product.id %>">
 <% end %>
