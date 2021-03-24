@@ -1,118 +1,107 @@
-
-
 <div class="mobile-container">
+  <div class="user-info-div">
 
-
-<div class="user-info-div">
-
-<% if user_signed_in? %>
- <div class="profile-hero">
-    <%= render 'components/avatar_square', picture:current_user.photo.key %>
-    <div class="fullname">
-      <h1>Hi</h1>
-      <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
+    <% if user_signed_in? %>
+    <div class="profile-hero">
+      <%= render 'components/avatar_square', picture:current_user.photo.key %>
+      <div class="fullname">
+        <h1>Hi</h1>
+        <h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
+      </div>
     </div>
-</div>
+
+    <div class="profile-info">
+      <ul class="user-list">
+
+        <li class="list-item">
+          <div class="icon-div">
+            <%= render 'icons/garderobe_icon'%>
+          </div>
+          <h5>Saved items: <%= current_user.garderobe_items.count %> </h5>
+        </li>
 
 
-<div class="profile-info">
-  <ul class="user-list">
+        <li class="list-item">
+          <div class="icon-div">
+            <%= render 'icons/mail_icon'%>
+          </div>
+          <h5><%= current_user.email %></h5>
+        </li>
 
-    <li class="list-item">
-      <div class="icon-div">
-        <%= render 'icons/garderobe_icon'%>
-      </div>
-        <h5>Saved items: <%= current_user.garderobe_items.count %> </h5>
-    </li>
-
-
-    <li class="list-item">
-      <div class="icon-div">
-        <%= render 'icons/mail_icon'%>
-      </div>
-        <h5><%= current_user.email %></h5>
-    </li>
-
-    <li class="list-item">
-      <div class="icon-div">
-        <%= render 'icons/birthday_icon'%>
-      </div>
-        <h5><%= current_user.birthday.to_formatted_s(:rfc822) %></h5>
-    </li>
+        <li class="list-item">
+          <div class="icon-div">
+            <%= render 'icons/birthday_icon'%>
+          </div>
+          <h5><%= current_user.birthday.to_formatted_s(:rfc822) %></h5>
+        </li>
 
 
-    <li class="list-item">
-      <div class="icon-div">
-        <%= render 'icons/gender_icon'%>
-      </div>
-      <h5><%= current_user.gender %></h5>
-    </li>
+        <li class="list-item">
+          <div class="icon-div">
+            <%= render 'icons/gender_icon'%>
+          </div>
+          <h5><%= current_user.gender %></h5>
+        </li>
 
-  </ul>
-</div>
+      </ul>
+    </div>
 
 
 
-<% end %>
+    <% end %>
 
-</div>
+  </div>
 
-<% if !user_signed_in? %>
-<!-- just a margin if the user is not logged in -->
-<div class="margin-for-menu"></div>
-<% end %>
-
-
-<div class="buttons-container">
-
-<!--   MODIFY WITH ABOUT US PATH PAGE -->
-  <%= link_to about_path, class:'profile-button' do %>
-    <%= render 'components/profile_button', text:'About Us' %>
+  <% if !user_signed_in? %>
+  <!-- just a margin if the user is not logged in -->
+  <div class="margin-for-menu"></div>
   <% end %>
+
+
+  <div class="buttons-container">
+
+    <%= link_to about_path, class:'profile-button' do %>
+    <%= render 'components/profile_button', text:'About Us' %>
+    <% end %>
 
     <%= link_to about_path, class:'profile-button' do %>
     <%= render 'components/profile_button', text:'contact us' %>
-  <% end %>
+    <% end %>
 
-  <% if user_signed_in? %>
+    <% if user_signed_in? %>
 
 
 
-    <!--   MODIFY WITH EDIT PATH PAGE -->
-     <%= link_to edit_user_registration_path, class:'profile-button' do %>
-      <%= render 'components/profile_button', text:'Edit Profile' %>
-      <% end %>
+    <%= link_to edit_user_registration_path, class:'profile-button' do %>
+    <%= render 'components/profile_button', text:'Edit Profile' %>
+    <% end %>
 
 
     <%= link_to user_products_path(current_user), class:'profile-button' do %>
-      <%= render 'components/profile_button', text:'My Garderobe' %>
+    <%= render 'components/profile_button', text:'My Garderobe' %>
     <% end %>
 
     <%= link_to destroy_user_session_path, method: 'delete', class:'profile-button' do %>
-      <%= render 'components/profile_button', text:'Logout' %>
+    <%= render 'components/profile_button', text:'Logout' %>
     <% end %>
 
-  <% end %>
+    <% end %>
 
     <%= link_to brands_index_path ,class:'profile-button' do %>
-      <%= render 'components/profile_button', text:'Store Locator' %>
+    <%= render 'components/profile_button', text:'Store Locator' %>
     <% end %>
     <% if current_user %>
     <a class="profile-button" id="install-button">
-        <%= render 'components/profile_button', text:'Install App' %>
+      <%= render 'components/profile_button', text:'Install App' %>
     </a>
     <% end %>
     <% if !user_signed_in? %>
-      <%= link_to new_user_session_path, class:'profile-button' do %>
-        <%= render 'components/profile_button', text:'Sign up' %>
+    <%= link_to new_user_session_path, class:'profile-button' do %>
+    <%= render 'components/profile_button', text:'Sign up' %>
     <% end %>
-  <% end %>
+    <% end %>
 
-</div>
-
-
-
-
+  </div>
 
 
 </div>
