@@ -2,37 +2,37 @@ require 'json'
 require 'open-uri'
 
 puts 'Start seeding... 🤟'
-User.destroy_all
+# User.destroy_all
 Product.destroy_all
 Fabric.destroy_all
 Brand.destroy_all
 
 
-olivia = User.new(
-  email: 'olivia@gmail.com',
-  password: 'password',
-  first_name: 'Olivia',
-  last_name: 'Smith',
-  birthday: '21/11/1989',
-  gender: 'female'
-  )
-picture = URI.open('https://cdn.nohat.cc/thumb/f/720/comrawpixel541200.jpg')
-olivia.photo.attach(io: picture, filename: 'olivia.jpg', content_type: 'image/jpg')
-olivia.save!
+# olivia = User.new(
+#   email: 'olivia@gmail.com',
+#   password: 'password',
+#   first_name: 'Olivia',
+#   last_name: 'Smith',
+#   birthday: '21/11/1989',
+#   gender: 'female'
+#   )
+# picture = URI.open('https://cdn.nohat.cc/thumb/f/720/comrawpixel541200.jpg')
+# olivia.photo.attach(io: picture, filename: 'olivia.jpg', content_type: 'image/jpg')
+# olivia.save!
 
-andrea = User.new(
-  email: 'andreamazza89@gmail.com',
-  password: 'password',
-  first_name: 'Andrea',
-  last_name: 'Mazza',
-  birthday: '21/11/1989',
-  gender: 'male'
-  )
-picture = URI.open('https://res.cloudinary.com/djeuk9059/image/upload/v1616164519/IMG_0413_ngbdoh.jpg')
-andrea.photo.attach(io: picture, filename: 'andrea.jpg', content_type: 'image/jpg')
-andrea.save!
+# andrea = User.new(
+#   email: 'andreamazza89@gmail.com',
+#   password: 'password',
+#   first_name: 'Andrea',
+#   last_name: 'Mazza',
+#   birthday: '21/11/1989',
+#   gender: 'male'
+#   )
+# picture = URI.open('https://res.cloudinary.com/djeuk9059/image/upload/v1616164519/IMG_0413_ngbdoh.jpg')
+# andrea.photo.attach(io: picture, filename: 'andrea.jpg', content_type: 'image/jpg')
+# andrea.save!
 
-puts 'Users seed done! 💪'
+# puts 'Users seed done! 💪'
 
 # GENERATE FABRICS INSTANCES
 
@@ -93,6 +93,74 @@ hm_products.each do |product|
             department: product["depatment"], # Typo in the scraper leave like this
             photo_url: product["img"],
             brand: Brand.where(name: product["brand"]).take
+            )
+
+  product["composition"].each do |material|
+    fabric = Fabric.where(name: material["fiber"].downcase).take
+    UsedMaterial.create!(
+                percentage: material["percentage"],
+                fabric: fabric,
+                product: instance
+                )
+  end
+
+    if product["suppliers"] && product["suppliers"]["exist?"]
+      product["suppliers"]["list"].each do |supplier|
+        current = Supplier.create!(
+          name: supplier["name"],
+          country: supplier["country"],
+          address: supplier["address"]
+        )
+      ProductSupplier.create!(supplier: current, product: instance)
+      end
+    end
+
+end
+puts " HM DONE! "
+zara_products = JSON.parse(open('db/scraped_data/zara_items.json').read)
+
+zara_products.each do |product|
+  instance = Product.create!(
+            name: product["name"],
+            category: product["article_type"],
+            article_number: product["article_number"],
+            department: product["department"], # Typo in the scraper leave like this
+            photo_url: product["img"],
+            brand: Brand.where(name: product["brand"].capitalize).take
+            )
+
+  product["composition"].each do |material|
+    fabric = Fabric.where(name: material["fiber"].downcase).take
+    UsedMaterial.create!(
+                percentage: material["percentage"],
+                fabric: fabric,
+                product: instance
+                )
+  end
+
+    if product["suppliers"] && product["suppliers"]["exist?"]
+      product["suppliers"]["list"].each do |supplier|
+        current = Supplier.create!(
+          name: supplier["name"],
+          country: supplier["country"],
+          address: supplier["address"]
+        )
+      ProductSupplier.create!(supplier: current, product: instance)
+      end
+    end
+
+end
+p "ZARA COMPLETE"
+
+tentree_products = JSON.parse(open('db/scraped_data/tentree_items.json').read)
+tentree_products.each do |product|
+  instance = Product.create!(
+            name: product["name"],
+            category: product["article_type"],
+            article_number: product["article_number"],
+            department: product["department"], # Typo in the scraper leave like this
+            photo_url: product["img"],
+            brand: Brand.where(name: product["brand"].capitalize).take
             )
 
   product["composition"].each do |material|

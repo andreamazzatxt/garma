@@ -86,13 +86,13 @@
   {
     "is_sustainable": true,
     "name": "Orange Fiber",
-    "description": "Orange Fiber: Orange Fiber is an innovative fabric made from orange skins that comes from the juice industry wastes.  Learn more…",
+    "description": "Orange Fiber: Orange Fiber is an innovative fabric made from orange skins that comes from the juice industry wastes.",
     "position": 15
   },
   {
     "is_sustainable": true,
     "name": "Pineapple Fiber (Piñatex)",
-    "description": "Pineapple Fiber (Piñatex)Piñatex is a fiber that comes from pineapple leaves. It is considered sustainable because it uses the by-products of pineapple harvests, so there is no need for extra resources to produce it. It is used as a substitute for leather. Learn more…  ",
+    "description": "Pineapple Fiber (Piñatex)Piñatex is a fiber that comes from pineapple leaves. It is considered sustainable because it uses the by-products of pineapple harvests, so there is no need for extra resources to produce it. It is used as a substitute for leather.",
     "position": 16
   },
   {
@@ -166,5 +166,149 @@
     "name": "Lyocell",
     "description": "Rayon is a fiber from regenerated cellulose, generally derived from wood pulp. Rayon is usually made from eucalyptus trees, but any plant can be used (such as bamboo, soy, cotton, etc). To produce the fiber, the plant cellulose goes through a process involving a lot of chemicals, energy and water.  Solvents used during the process can be very toxic to humans and to the environment. Viscose, modal, lyocell and bamboo are different types of rayon.  The other substantial environmental concerns arising from rayon production is the massive deforestation involved. Thousands of hectares of rainforest are cut down each year to plant trees specifically used to make rayon. Only a very small percentage of this wood is obtained through sustainable forestry practices.    Viscose (also called Artificial Silk or Art Silk) is the most common type of rayon. Viscose production involves a lot of chemicals, heavily harmful to the environment when they are released in effluents.Modal, another type of rayon using beech trees with a similar process to viscose. The company Lenzing, selling modal under Lenzing Modal® only uses trees from sustainably harvested forests (PEFC certified) and employs an eco-friendly bleaching method. However modal is produced by many other manufacturers who don’t necessarily use sustainable processes.Cupro is a rayon fiber from cotton wastes, which is a sustainable aspect. But it still undergoes a chemical process to be transformed, leading to negative consequences for the environment.",
     "position": 29
+  },
+  {
+    "is_sustainable": false,
+    "name": "elastane",
+    "description": "Other Synthetic Fibers: Acrylic, polyamide, nylon, polypropylene, PVC, spandex (AKA lycra or elastane), aramide, etc, are all different types of synthetic fibers that are derived from petroleum and therefore have a very similar impact on the environment as polyester.",
+    "position": 30
+  },
+  {
+    "is_sustainable": false,
+    "name": "polycarbonate",
+    "description": "Other Synthetic Fibers: Acrylic, polyamide, nylon, polypropylene, PVC, spandex (AKA lycra or elastane), aramide, etc, are all different types of synthetic fibers that are derived from petroleum and therefore have a very similar impact on the environment as polyester.",
+    "position": 31
+  },
+  {
+    "is_sustainable": false,
+    "name": "triacetate",
+    "description": "Other Synthetic Fibers: Acrylic, polyamide, nylon, polypropylene, PVC, spandex (AKA lycra or elastane), aramide, etc, are all different types of synthetic fibers that are derived from petroleum and therefore have a very similar impact on the environment as polyester.",
+    "position": 32
+  },
+  {
+    "is_sustainable": false,
+    "name": "polystyrene",
+    "description": "Other Synthetic Fibers: Acrylic, polyamide, nylon, polypropylene, PVC, spandex (AKA lycra or elastane), aramide, etc, are all different types of synthetic fibers that are derived from petroleum and therefore have a very similar impact on the environment as polyester.",
+    "position": 33
+  },
+  {
+    "is_sustainable": false,
+    "name": "Metal",
+    "description": "",
+    "position": 34
+  },
+  {
+    "is_sustainable": false,
+    "name": "Zinc",
+    "description": "",
+    "position": 35
+  },
+  {
+    "is_sustainable": false,
+    "name": "Iron",
+    "description": "",
+    "position": 36
+  },
+  {
+    "is_sustainable": false,
+    "name": "Glass",
+    "description": "",
+    "position": 36
+  },
+  {
+    "is_sustainable": false,
+    "name": "Acetate",
+    "description": "Other Synthetic Fibers: Acrylic, polyamide, nylon, polypropylene, PVC, spandex (AKA lycra or elastane), aramide, etc, are all different types of synthetic fibers that are derived from petroleum and therefore have a very similar impact on the environment as polyester.",
+    "position": 37
+  },
+  {
+    "is_sustainable": false,
+    "name": "Suede",
+    "description": "Leather: Leather is a controversial fiber. First of all, it is not an animal-friendly option, since it is made of dead animal skin.But environmental and social concerns related to leather are mostly linked to the tanning process:  Toxic chemicals are used (chromium in 80% of cases)  to transform the skins into wearable leather.Those substances are often dumped into rivers, polluting freshwater and oceans. Also, most of the tanning factory workers around the world do not wear adequate protection and suffer from skin, eye, and respiratory diseases, cancer and more due to their exposure to chemical substances.  Many children also work in tanneries.\"Chrome-free\" leather, which usually means aldehyde-tanned or vegetable-tanned, is an alternatives to chrome-tanned leather. However, it has been proven that its environmental impact is very similar to chrome-tanned leather.The good news is that some sustainable leather options are starting to appear. Learn more...",
+    "position": 38
+  },
+  {
+    "is_sustainable": false,
+    "name": "Copper",
+    "description": "",
+    "position": 39
+  },
+  {
+    "is_sustainable": false,
+    "name": "methacrylate",
+    "description": "Other Synthetic Fibers: Acrylic, polyamide, nylon, polypropylene, PVC, spandex (AKA lycra or elastane), aramide, etc, are all different types of synthetic fibers that are derived from petroleum and therefore have a very similar impact on the environment as polyester.",
+    "position": 40
+  },
+  {
+    "is_sustainable": false,
+    "name": "modacrylic",
+    "description": "Other Synthetic Fibers: Acrylic, polyamide, nylon, polypropylene, PVC, spandex (AKA lycra or elastane), aramide, etc, are all different types of synthetic fibers that are derived from petroleum and therefore have a very similar impact on the environment as polyester.",
+    "position": 41
+  },
+  {
+    "is_sustainable": false,
+    "name": "polypropylene",
+    "description": "Other Synthetic Fibers: Acrylic, polyamide, nylon, polypropylene, PVC, spandex (AKA lycra or elastane), aramide, etc, are all different types of synthetic fibers that are derived from petroleum and therefore have a very similar impact on the environment as polyester.",
+    "position": 42
+  },
+  {
+    "is_sustainable": false,
+    "name": "copolyester",
+    "description": "Other Synthetic Fibers: Acrylic, polyamide, nylon, polypropylene, PVC, spandex (AKA lycra or elastane), aramide, etc, are all different types of synthetic fibers that are derived from petroleum and therefore have a very similar impact on the environment as polyester.",
+    "position": 43
+  },
+  {
+    "is_sustainable": false,
+    "name": "propionate",
+    "description": "Other Synthetic Fibers: Acrylic, polyamide, nylon, polypropylene, PVC, spandex (AKA lycra or elastane), aramide, etc, are all different types of synthetic fibers that are derived from petroleum and therefore have a very similar impact on the environment as polyester.",
+    "position": 44
+  },
+  {
+    "is_sustainable": false,
+    "name": "Brass",
+    "description": "",
+    "position": 39
+  },
+  {
+    "is_sustainable": false,
+    "name": "elastodiene",
+    "description": "Other Synthetic Fibers: Acrylic, polyamide, nylon, polypropylene, PVC, spandex (AKA lycra or elastane), aramide, etc, are all different types of synthetic fibers that are derived from petroleum and therefore have a very similar impact on the environment as polyester.",
+    "position": 44
+  },
+  {
+    "is_sustainable": false,
+    "name": "Plastic",
+    "description": "Polyester: Polyester is the most common fiber in our garment. We can find it in 52% of our clothes.Polyester is a synthetic fiber derived from petroleum, a nonrenewable fossil fuel.  As we know, the transformation of crude oil into petrochemicals releases toxins into the atmosphere that are dangerous for human and ecosystem health.The production of polyester also highly energy intensive.One of the major problems with this plastic fiber, is the fact that it is non-biodegradable. Learn more about fashion & wastes...Furthermore, each time we wash a polyester garment, it releases 700.000 plastic microfibers, ending up in rivers and oceans and then in our food chain. Learn more..",
+    "position": 45
+  },
+  {
+    "is_sustainable": false,
+    "name": "Pig Leather",
+    "description": "Leather: Leather is a controversial fiber. First of all, it is not an animal-friendly option, since it is made of dead animal skin.But environmental and social concerns related to leather are mostly linked to the tanning process:  Toxic chemicals are used (chromium in 80% of cases)  to transform the skins into wearable leather.Those substances are often dumped into rivers, polluting freshwater and oceans. Also, most of the tanning factory workers around the world do not wear adequate protection and suffer from skin, eye, and respiratory diseases, cancer and more due to their exposure to chemical substances.  Many children also work in tanneries.\"Chrome-free\" leather, which usually means aldehyde-tanned or vegetable-tanned, is an alternatives to chrome-tanned leather. However, it has been proven that its environmental impact is very similar to chrome-tanned leather.The good news is that some sustainable leather options are starting to appear. Learn more...",
+    "position": 46
+  },
+  {
+    "is_sustainable": false,
+    "name": "Sheep Leather",
+    "description": "Leather: Leather is a controversial fiber. First of all, it is not an animal-friendly option, since it is made of dead animal skin.But environmental and social concerns related to leather are mostly linked to the tanning process:  Toxic chemicals are used (chromium in 80% of cases)  to transform the skins into wearable leather.Those substances are often dumped into rivers, polluting freshwater and oceans. Also, most of the tanning factory workers around the world do not wear adequate protection and suffer from skin, eye, and respiratory diseases, cancer and more due to their exposure to chemical substances.  Many children also work in tanneries.\"Chrome-free\" leather, which usually means aldehyde-tanned or vegetable-tanned, is an alternatives to chrome-tanned leather. However, it has been proven that its environmental impact is very similar to chrome-tanned leather.The good news is that some sustainable leather options are starting to appear. Learn more...",
+    "position": 47
+  },
+  {
+    "is_sustainable": true,
+    "name": "Silk (mulberry)",
+    "description": "Silk: Silk is a protein fiber spun by silkworms and is a renewable resource. Silk is also biodegradable. For these reasons, we consider silk a sustainable fiber. However, chemicals are used to produce conventional silk, so we will always consider organic silk to be a better option.Because conventional silk production kills the silkworm, animal rights advocates prefer “Peace Silk”, Tussah, Ahimsa silks which allow the moth to evacuate the cocoon before it is boiled to produce silk.",
+    "position": 10
+  },
+  {
+    "is_sustainable": false,
+    "name": "Cupro",
+    "description": "Rayon is a fiber from regenerated cellulose, generally derived from wood pulp. Rayon is usually made from eucalyptus trees, but any plant can be used (such as bamboo, soy, cotton, etc). To produce the fiber, the plant cellulose goes through a process involving a lot of chemicals, energy and water.  Solvents used during the process can be very toxic to humans and to the environment. Viscose, modal, lyocell and bamboo are different types of rayon.  The other substantial environmental concerns arising from rayon production is the massive deforestation involved. Thousands of hectares of rainforest are cut down each year to plant trees specifically used to make rayon. Only a very small percentage of this wood is obtained through sustainable forestry practices.    Viscose (also called Artificial Silk or Art Silk) is the most common type of rayon. Viscose production involves a lot of chemicals, heavily harmful to the environment when they are released in effluents.Modal, another type of rayon using beech trees with a similar process to viscose. The company Lenzing, selling modal under Lenzing Modal® only uses trees from sustainably harvested forests (PEFC certified) and employs an eco-friendly bleaching method. However modal is produced by many other manufacturers who don’t necessarily use sustainable processes.Cupro is a rayon fiber from cotton wastes, which is a sustainable aspect. But it still undergoes a chemical process to be transformed, leading to negative consequences for the environment.",
+    "position": 24
+  },
+  {
+    "is_sustainable": true,
+    "name": "Tencel",
+    "description": "Lyocell (Tencel®)Lyocell is a manufacturing process of rayon which is much more eco-friendly than its relatives modal and viscose. Lyocell is made in a closed-loop system that recycles almost all of the chemicals used. “Lyocell” is the generic name of the manufacturing process and fiber. Tencel® is the brand name of the lyocell commercialized by the company Lenzing AG. Tencel® is made from eucalyptus from PEFC certified forests. Eucalyptus trees grow quickly without the use of pesticides, fertilizers or irrigation.  Just like rayon and viscose, lyocell is 100% biodegradable.Ioncell-F is another rayon developed by Aalto University in Finland, similar to Lyocell but considered to be even more sustainable.",
+    "position": 14
   }
 ]
