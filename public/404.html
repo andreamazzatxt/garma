@@ -4,8 +4,15 @@
   <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
+
+  html {
+    width: 100vw;
+    height: 100vh;
+  }
   .rails-default-error-page {
-    background-color: #EFEFEF;
+    heigh: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, #6AE29C 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #4EC5EF 0%, rgba(78, 197, 239, 0) 100%);  background-repeat: no-repeat;
     color: #2E2F30;
     text-align: center;
     font-family: arial, sans-serif;
@@ -32,9 +39,18 @@
   }
 
   .rails-default-error-page h1 {
-    font-size: 100%;
-    color: #730E15;
+    font-size: 5rem;
+    color: white;
     line-height: 1.5em;
+  }
+
+  .error-box {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .rails-default-error-page div.dialog > p {
@@ -56,12 +72,13 @@
 
 <body class="rails-default-error-page">
   <!-- This file lives in public/404.html -->
-  <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
+
+    <div class="error-box">
+      <a href="/">
+        <img src="./404.png" height="400" width="300" alt="Error 404 image">
+      </a>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
-  </div>
+
+
 </body>
 </html>
