@@ -82,7 +82,11 @@ zara.photo.attach(io: picture, filename: 'brand-logo-zara.jpg', content_type: 'i
 
 tentree = Brand.find_by(name: "tentree")
 picture = URI.open('https://cdn.shopify.com/s/files/1/2341/3995/files/tt-logo--top-simple_2x_c58d381e-fd8f-4318-b46c-cc6b80672e4c.png?v=1605747862')
-tentree.photo.attach(io: picture, filename: 'brand-logo-tentree.jpg', content_type: 'image/webp')
+tentree.photo.attach(io: picture, filename: 'brand-logo-tentree.png', content_type: 'image/webp')
+
+north = Brand.find_by(name: "The North Face")
+picture = URI.open('https://is5-ssl.mzstatic.com/image/thumb/Purple114/v4/2b/2f/3c/2b2f3c0a-49f6-3a77-c8e1-bc593f583e0c/source/512x512bb.jpg')
+tentree.photo.attach(io: picture, filename: 'north.jpg', content_type: 'image/webp')
 
 puts 'Brands seed done! 💪'
 
@@ -184,5 +188,75 @@ tentree_products.each do |product|
       ProductSupplier.create!(supplier: current, product: instance)
 
 end
+
+p "TENTREE COMPLETE"
+
+patagonia_products = JSON.parse(open('db/scraped_data/patagonia_items.json').read)
+
+patagonia_products.each do |product|
+  p product
+  instance = Product.create!(
+            name: product["name"],
+            category: product["article_type"],
+            article_number: product["article_number"],
+            department: product["depatment"],
+            photo_url: product["img"],
+            brand: Brand.where(name: product["brand"].downcase.capitalize).take
+            )
+
+  product["composition"].each do |material|
+    fabric = Fabric.where(name: material["fiber"].downcase).take
+    UsedMaterial.create!(
+                percentage: material["percentage"],
+                fabric: fabric,
+                product: instance
+                )
+  end
+  if product["suppliers"] && product["suppliers"]["exist?"]
+      product["suppliers"]["list"].each do |supplier|
+        current = Supplier.create!(
+          name: supplier["name"],
+          country: supplier["country"],
+          address: supplier["address"]
+        )
+      ProductSupplier.create!(supplier: current, product: instance)
+      end
+    end
+end
+
+p "PATAGONIA COMPLETE"
+
+north_products = JSON.parse(open('db/scraped_data/north_face_items.json').read)
+north_products.each do |product|
+  p product
+  instance = Product.create!(
+            name: product["name"],
+            category: product["article_type"],
+            article_number: product["article_number"],
+            department: product["department"],
+            photo_url: product["img"],
+            brand: Brand.where(name: "The North Face").take
+            )
+
+  product["composition"].each do |material|
+    fabric = Fabric.where(name: material["fiber"].downcase).take
+    UsedMaterial.create!(
+                percentage: material["percentage"],
+                fabric: fabric,
+                product: instance
+                )
+  end
+  if product["suppliers"] && product["suppliers"]["exist?"]
+      product["suppliers"]["list"].each do |supplier|
+        current = Supplier.create!(
+          name: supplier["name"],
+          country: supplier["country"],
+          address: supplier["address"]
+        )
+      ProductSupplier.create!(supplier: current, product: instance)
+      end
+    end
+end
+
 
 puts 'Seed complete! 🌱'

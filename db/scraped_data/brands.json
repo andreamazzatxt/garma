@@ -1,20 +1,5 @@
 [
   {
-    "name": "Primark",
-    "rating": 2,
-    "subratings": {
-      "planet": "2",
-      "people": "2",
-      "animals": "2"
-    },
-    "description": {
-      "planet": " It has fast fashion traits such as on trend styles and regular new arrivals. It uses few eco-friendly materials. There is no evidence it has set a greenhouse gas emissions reduction target. It has set a deadline to eliminate hazardous chemicals by 2020 but there is no evidence it is on track to meet its target",
-      "people": " None of its supply chain is certified by labour standards which ensure worker health and safety, living wages or other labour rights. It received a score of 31-40% in the Fashion Transparency Index. It likely publishes information about its supplier policies, audits and remediation processes. It likely publishes a list of suppliers in the final stage of production but not the second stage. It may be publishing limited information about forced labour, gender equality or freedom of association. There is no evidence it ensures payment of a living wage in its supply chain. It discloses inadequate policies or safeguards to protect suppliers and workers in its supply chain from the impacts of COVID-19",
-      "animals": " It has a basic formal policy to protect animal welfare. It uses leather and wool. It does not use fur, down, exotic animal skin, exotic animal hair or angora. There is no evidence it traces any animal product to the first stage of production"
-    },
-    "position": 1
-  },
-  {
     "name": "HM",
     "rating": 3,
     "subratings": {
