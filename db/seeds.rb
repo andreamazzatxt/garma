@@ -163,10 +163,10 @@ tentree_products.each do |product|
   instance = Product.create!(
             name: product["name"],
             category: product["article_type"],
-            article_number: product["article_number"],
-            department: product["department"], # Typo in the scraper leave like this
+            article_number: product["acrticle_number 1"],
+            department: product["department"],
             photo_url: product["img"],
-            brand: Brand.where(name: product["brand"].capitalize).take
+            brand: Brand.where(name: product["brand"]).take
             )
 
   product["composition"].each do |material|
