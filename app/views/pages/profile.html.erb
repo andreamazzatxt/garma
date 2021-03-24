@@ -66,8 +66,12 @@
 <div class="buttons-container">
 
 <!--   MODIFY WITH ABOUT US PATH PAGE -->
-  <%= link_to new_user_session_path, class:'profile-button' do %>
+  <%= link_to about_path, class:'profile-button' do %>
     <%= render 'components/profile_button', text:'About Us' %>
+  <% end %>
+
+    <%= link_to about_path, class:'profile-button' do %>
+    <%= render 'components/profile_button', text:'contact us' %>
   <% end %>
 
   <% if user_signed_in? %>
