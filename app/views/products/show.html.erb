@@ -1,3 +1,14 @@
+<% content_for :head do %>
+  <title><%= @product.name %> | Garma</title>
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="<%= @product.name %> details for ecosustainability and impact on the planet"/>
+  <meta property="og:title" content="find more information about the sustainability of <%= @product.name %>"/>
+  <meta property="og:description" content="<%= @product.name %> details for ecosustainability and impact on the planet"/>
+  <meta property="og:site_name" content="Garma">
+  <meta name="og:image" content='<%= @product.photo_url %>'>
+  <meta property="og:url" content="https://www.garma.app/products/<%= @product.id %>">
+<% end %>
+
 <div class="mobile-container ">
 
   <!--------------------------product hero section------------------------------------>
@@ -23,51 +34,51 @@
 
 <div class="product-card-wrapper" data-aos="fade-left">
   <!--------------------------brand section------------------------------------>
-<%= render '/components/product-card' , title: 'Brand', field_icon:'brand_icon', rating: @product.brand.rating %>
-<!-- section to hide -->
+  <%= render '/components/product-card' , title: 'Brand', field_icon:'brand_icon', rating: @product.brand.rating %>
+  <!-- section to hide -->
 
-<div class="product-content disabled">
+  <div class="product-content disabled">
 
-  <div class="product-title">
-    <h2><%= @product.brand.name %> </h2>
-  </div>
+    <div class="product-title">
+      <h2><%= @product.brand.name %> </h2>
+    </div>
 
-  <div class="rating-leafs-container total">
-    <%= render 'shared/leaf', rating: @product.brand.rating %>
-  </div>
+    <div class="rating-leafs-container total">
+      <%= render 'shared/leaf', rating: @product.brand.rating %>
+    </div>
 
-  <div class="rating-article-container">
-    <div class="description-article">
-      <h3>Planet Impact</h3>
-      <article><%= @product.brand.planet_description %> </article>
-      <div class="rating-leafs-container complementary-leafs ">
-        <%= render 'shared/leaf', rating: @product.brand.planet_rating %>
+    <div class="rating-article-container">
+      <div class="description-article">
+        <h3>Planet Impact</h3>
+        <article><%= @product.brand.planet_description %> </article>
+        <div class="rating-leafs-container complementary-leafs ">
+          <%= render 'shared/leaf', rating: @product.brand.planet_rating %>
+        </div>
+      </div>
+
+      <div class="description-article">
+        <h3>People Impact</h3>
+        <article><%= @product.brand.people_description %> </article>
+        <div class="rating-leafs-container complementary-leafs ">
+          <%= render 'shared/leaf', rating: @product.brand.people_rating %>
+        </div>
+      </div>
+
+      <div class="description-article">
+        <h3>Animals Impact</h3>
+        <article><%= @product.brand.animals_description %> </article>
+        <div class="rating-leafs-container complementary-leafs ">
+          <%= render 'shared/leaf', rating: @product.brand.animals_rating %>
+        </div>
       </div>
     </div>
 
-    <div class="description-article">
-      <h3>People Impact</h3>
-      <article><%= @product.brand.people_description %> </article>
-      <div class="rating-leafs-container complementary-leafs ">
-        <%= render 'shared/leaf', rating: @product.brand.people_rating %>
-      </div>
-    </div>
 
-    <div class="description-article">
-      <h3>Animals Impact</h3>
-      <article><%= @product.brand.animals_description %> </article>
-      <div class="rating-leafs-container complementary-leafs ">
-        <%= render 'shared/leaf', rating: @product.brand.animals_rating %>
-      </div>
-    </div>
+    <button class="arrow-open-close">
+      <i id="arrow-close"class="fas fa-caret-up fa-3x"></i>
+    </button>
+
   </div>
-
-
-  <button class="arrow-open-close">
-    <i id="arrow-close"class="fas fa-caret-up fa-3x"></i>
-  </button>
-
-</div>
 
 </div>
 
@@ -75,17 +86,17 @@
 
 <!--------------------------Fabric section------------------------------------>
 <div class="product-card-wrapper">
-<%= render '/components/product-card' , title: 'Fabric', field_icon:'fabric_icon', rating: @product.fabrics_rating %>
+  <%= render '/components/product-card' , title: 'Fabric', field_icon:'fabric_icon', rating: @product.fabrics_rating %>
 
-<!-- section to hide -->
+  <!-- section to hide -->
 
-<div class="product-content disabled">
+  <div class="product-content disabled">
 
-  <div class="product-title">
-   <h2>Fabric</h2>
-  </div>
+    <div class="product-title">
+     <h2>Fabric</h2>
+   </div>
 
-  <div class="rating-leafs-container total">
+   <div class="rating-leafs-container total">
     <!-- LOGIC IN PRODUCT METHOD -->
     <%= render 'shared/leaf', rating: @product.fabrics_rating %>
   </div>
@@ -122,15 +133,15 @@
 
 <!--------------------------supplier section------------------------------------>
 <div class="product-card-wrapper">
-<%= render '/components/product-card' , title: 'Supplier', field_icon: 'supplier_icon', rating: @product.suppliers_rating %>
-<!-- section to hide -->
+  <%= render '/components/product-card' , title: 'Supplier', field_icon: 'supplier_icon', rating: @product.suppliers_rating %>
+  <!-- section to hide -->
 
-<div class="product-content disabled">
-  <div class="product-title">
-   <h2>Supplier</h2>
-  </div>
+  <div class="product-content disabled">
+    <div class="product-title">
+     <h2>Supplier</h2>
+   </div>
 
-  <div class="rating-leafs-container total">
+   <div class="rating-leafs-container total">
     <!-- LOGIC IN PRODUCT METHOD -->
     <%= render 'shared/leaf', rating: 4 %>
   </div>

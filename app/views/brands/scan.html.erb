@@ -1,4 +1,6 @@
-
+<% content_for :head do %>
+<meta name="robots" content="noindex, nofollow" />
+<% end %>
   <div id="scanner-container" data-brand-id= "<%= @brand_id %>" class="scanner-container scan-hide">
 
     <video class="video-wrapper" onplaying="this.controls=false" id="video"></video>

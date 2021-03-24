@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Change Your Garderobe Sustainability | Garma</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="noindex, follow" /> on all the other pages
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" href="../public/favicon.ico">
+      <% if content_for?(:head) %>
+        <%= yield(:head) %>
+      <% end %>
     <link rel="apple-touch-icon" href="/icons/icon512.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -24,3 +28,6 @@
     <%= render 'shared/menu' unless @disable_nav %>
   </body>
 </html>
+
+
+profile edit product-index scan(noindex, nofollow)
