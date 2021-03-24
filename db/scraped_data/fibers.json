@@ -194,25 +194,25 @@
   {
     "is_sustainable": false,
     "name": "Metal",
-    "description": "",
+    "description": "Metal",
     "position": 34
   },
   {
     "is_sustainable": false,
     "name": "Zinc",
-    "description": "",
+    "description": "Zinc",
     "position": 35
   },
   {
     "is_sustainable": false,
     "name": "Iron",
-    "description": "",
+    "description": "Iron",
     "position": 36
   },
   {
     "is_sustainable": false,
     "name": "Glass",
-    "description": "",
+    "description": "Glass",
     "position": 36
   },
   {
@@ -230,7 +230,7 @@
   {
     "is_sustainable": false,
     "name": "Copper",
-    "description": "",
+    "description": "Copper",
     "position": 39
   },
   {
@@ -266,7 +266,7 @@
   {
     "is_sustainable": false,
     "name": "Brass",
-    "description": "",
+    "description": "Brass",
     "position": 39
   },
   {

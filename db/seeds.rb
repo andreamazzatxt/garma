@@ -80,6 +80,10 @@ zara = Brand.find_by(name: "Zara")
 picture = URI.open('https://play-lh.googleusercontent.com/Etar8ijdCl_bYMpgCEnHlS505Dkgh-BmUJjmQCSlzyv-8o8Acp7BFxfFiGtju1DTMuqT')
 zara.photo.attach(io: picture, filename: 'brand-logo-zara.jpg', content_type: 'image/webp')
 
+tentree = Brand.find_by(name: "tentree")
+picture = URI.open('https://cdn.shopify.com/s/files/1/2341/3995/files/tt-logo--top-simple_2x_c58d381e-fd8f-4318-b46c-cc6b80672e4c.png?v=1605747862')
+tentree.photo.attach(io: picture, filename: 'brand-logo-tentree.jpg', content_type: 'image/webp')
+
 puts 'Brands seed done! 💪'
 
 # HM PRODUCT INSTANCES
@@ -153,7 +157,9 @@ end
 p "ZARA COMPLETE"
 
 tentree_products = JSON.parse(open('db/scraped_data/tentree_items.json').read)
+
 tentree_products.each do |product|
+  p product
   instance = Product.create!(
             name: product["name"],
             category: product["article_type"],
@@ -171,17 +177,11 @@ tentree_products.each do |product|
                 product: instance
                 )
   end
-
-    if product["suppliers"] && product["suppliers"]["exist?"]
-      product["suppliers"]["list"].each do |supplier|
         current = Supplier.create!(
-          name: supplier["name"],
-          country: supplier["country"],
-          address: supplier["address"]
-        )
+          name: "Anonymous",
+          country: product["supplier"],
+          address: "-"        )
       ProductSupplier.create!(supplier: current, product: instance)
-      end
-    end
 
 end
 
