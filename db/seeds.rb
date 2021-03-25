@@ -213,8 +213,8 @@ patagonia_products.each do |product|
                 product: instance
                 )
   end
-  if product["suppliers"] && product["suppliers"]["exist?"]
-      product["suppliers"]["list"].each do |supplier|
+  if product["supplier"] && product["supplier"]["exist?"]
+      product["supplier"]["list"].each do |supplier|
         current = Supplier.create!(
           name: supplier["name"],
           country: supplier["country"],
