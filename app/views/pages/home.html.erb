@@ -1,18 +1,32 @@
+<% content_for :head do %>
+  <title>Home Page | Garma App</title>
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="Just continue shopping like you used to do it. Before buying you favourite product, make the fact check with the Garma App: Was this piece of fashion really produced sustainable? Garma will check it for you. Then it's up to you to decide, if you really want to buy the product. With Garma you will make a fast fashion environmental impact."/>
+  <meta property="og:title" content="Amazing App for Eco-friendly lovers ..."/>
+  <meta property="og:description" content="The Garma App helps you to buy eco friendly clothing. Ever wondered how you can leave a positive footprint to the environment while buying clothes? Garma will make this easy for you."/>
+  <meta property="og:site_name" content="Garma">
+  <meta property="og:type" content="website" />
+
+  <!-- need an image -->
+  <meta name="og:image" content='/assets/images/gradient_logo.png'>
+  <meta property="og:url" content="https://www.garma.app %>">
+<% end %>
+
 <div class="container">
   <!-- Logo -->
   <div class="logo">
-    <%= image_tag 'logo.png', height: '182', width: '295' %>
+    <%= image_tag 'logo.png', height: '140', width: '235' %>
     <!-- Teaser -->
-    <p> Your Eco Friendly Clothing Karma</p>
+    <p class='logo-p'> Your Eco Friendly Clothing Karma</p>
   </div>
     <!-- Buttons -->
   <div class="buttons-container">
     <div class="footer-section1">
-      <button type="button" class="garma-btn-primary" onclick="window.location.href='./brands';">Discover Brands</button>
+      <button type="button" class="garma-btn-primary p-2" onclick="window.location.href='./brands';">Discover Brands</button>
     </div>
     <% if !current_user %>
     <div class="footer-section2">
-      <a type="button" style="color: #06436F;" onclick="window.location.href='./users/sign_in';">Login</a>
+      <a  style="color: #06436F;" onclick="window.location.href='./users/sign_in';">Login</a>
     </div>
     <% end %>
   </div>

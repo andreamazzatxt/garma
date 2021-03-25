@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Change Your Garderobe Sustainability | Garma</title>
+     <% if content_for?(:head) %>
+        <%= yield(:head) %>
+      <% end %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="./assets/images/favicon.ico">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <link rel="manifest" href="/manifest.json">
-    <link rel="icon" href="../public/favicon.ico">
     <link rel="apple-touch-icon" href="/icons/icon512.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -24,3 +26,4 @@
     <%= render 'shared/menu' unless @disable_nav %>
   </body>
 </html>
+

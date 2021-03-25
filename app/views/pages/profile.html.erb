@@ -1,3 +1,8 @@
+<% content_for :head do %>
+<title>Menu of Garma| Garma App</title>
+<meta name="robots" content="noindex, follow" />
+<% end %>
+
 <div class="mobile-container">
   <div class="user-info-div">
 
@@ -25,7 +30,8 @@
           <div class="icon-div">
             <%= render 'icons/mail_icon'%>
           </div>
-          <h5><%= current_user.email %></h5>
+
+          <h5><%= current_user.email.length < 18 ? current_user.email : current_user.email[0..5] + "***" + current_user.email[-10..-1]  %></h5>
         </li>
 
         <li class="list-item">
