@@ -2,37 +2,37 @@ require 'json'
 require 'open-uri'
 
 puts 'Start seeding... 🤟'
-# User.destroy_all
+User.destroy_all
 Product.destroy_all
 Fabric.destroy_all
 Brand.destroy_all
 
 
-# olivia = User.new(
-#   email: 'olivia@gmail.com',
-#   password: 'password',
-#   first_name: 'Olivia',
-#   last_name: 'Smith',
-#   birthday: '21/11/1989',
-#   gender: 'female'
-#   )
-# picture = URI.open('https://cdn.nohat.cc/thumb/f/720/comrawpixel541200.jpg')
-# olivia.photo.attach(io: picture, filename: 'olivia.jpg', content_type: 'image/jpg')
-# olivia.save!
+olivia = User.new(
+  email: 'olivia@gmail.com',
+  password: 'password',
+  first_name: 'Olivia',
+  last_name: 'Smith',
+  birthday: '21/11/1989',
+  gender: 'female'
+  )
+picture = URI.open('https://cdn.nohat.cc/thumb/f/720/comrawpixel541200.jpg')
+olivia.photo.attach(io: picture, filename: 'olivia.jpg', content_type: 'image/jpg')
+olivia.save!
 
-# andrea = User.new(
-#   email: 'andreamazza89@gmail.com',
-#   password: 'password',
-#   first_name: 'Andrea',
-#   last_name: 'Mazza',
-#   birthday: '21/11/1989',
-#   gender: 'male'
-#   )
-# picture = URI.open('https://res.cloudinary.com/djeuk9059/image/upload/v1616164519/IMG_0413_ngbdoh.jpg')
-# andrea.photo.attach(io: picture, filename: 'andrea.jpg', content_type: 'image/jpg')
-# andrea.save!
+andrea = User.new(
+  email: 'andreamazza89@gmail.com',
+  password: 'password',
+  first_name: 'Andrea',
+  last_name: 'Mazza',
+  birthday: '21/11/1989',
+  gender: 'male'
+  )
+picture = URI.open('https://res.cloudinary.com/djeuk9059/image/upload/v1616164519/IMG_0413_ngbdoh.jpg')
+andrea.photo.attach(io: picture, filename: 'andrea.jpg', content_type: 'image/jpg')
+andrea.save!
 
-# puts 'Users seed done! 💪'
+puts 'Users seed done! 💪'
 
 # GENERATE FABRICS INSTANCES
 
@@ -227,7 +227,7 @@ end
 
 p "PATAGONIA COMPLETE"
 
-north_products = JSON.parse(open('db/scraped_data/nike_items.json').read)
+north_products = JSON.parse(open('db/scraped_data/north_face_items.json').read)
 north_products.each do |product|
   p product
   instance = Product.create!(
@@ -261,7 +261,7 @@ end
 
 p "NIKE COMPLETE"
 
-nike_products = JSON.parse(open('db/scraped_data/north_face_items.json').read)
+nike_products = JSON.parse(open('db/scraped_data/nike_items.json').read)
 nike_products.each do |product|
   p product
   instance = Product.create!(
@@ -270,7 +270,7 @@ nike_products.each do |product|
             article_number: product["article_number"],
             department: product["department"],
             photo_url: product["img"],
-            brand: Brand.where(name: "The North Face").take
+            brand: Brand.where(name: "Nike").take
             )
 
   product["composition"].each do |material|
