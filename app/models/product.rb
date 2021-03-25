@@ -27,4 +27,14 @@ class Product < ApplicationRecord
     item = GarderobeItem.find_by(user: user, product: self)
     item.nil? ? 'false' : item.id
   end
+
+  def self.best_items
+    items = []
+    Product.all.each do |product|
+      if product.total_rating >= 1
+        items << product.article_number
+      end
+    end
+    return items
+  end
 end

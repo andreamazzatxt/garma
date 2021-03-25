@@ -677,7 +677,7 @@
     "composition": [
       {
         "percentage": "100",
-        "fiber": "nylon"
+        "fiber": "Other Synthetic Fibers"
       }
     ],
     "supplier": {
@@ -1021,7 +1021,7 @@
     "composition": [
       {
         "percentage": "100",
-        "fiber": "nylon"
+        "fiber": "Other Synthetic Fibers"
       }
     ],
     "supplier": {
@@ -1513,7 +1513,7 @@
     "composition": [
       {
         "percentage": "72",
-        "fiber": "nylon"
+        "fiber": "Other Synthetic Fibers"
       },
       {
         "percentage": "28",
@@ -1549,7 +1549,7 @@
     "composition": [
       {
         "percentage": "88",
-        "fiber": "nylon"
+        "fiber": "Other Synthetic Fibers"
       },
       {
         "percentage": "12",

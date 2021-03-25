@@ -12,7 +12,7 @@
       "people": " Almost none of its supply chain is certified by labour standards which ensure worker health and safety, living wages or other labour rights. It received a score of 71-80% in the Fashion Transparency Index. It publishes detailed information about its supplier policies, audit and remediation processes. It publishes a detailed list of suppliers in the final stage of production, some information about the second and first stages of production and detailed information about the findings of supplier audits. It publishes detailed information about forced labour, gender equality or freedom of association. It has a project to improve wages in its supply chain however there is no evidence it ensures payment of a living wage in most of its supply chain. It discloses some policies to protect suppliers and workers in its supply chain from the impacts of COVID-19 but implementation is uncertain",
       "animals": " It has a formal animal welfare policy aligned with Five Freedoms. It uses leather and exotic animal hair. It uses down accredited by the Responsible Down Standard. It states that it sources wool from non-mulesed sheep. It does not use fur, angora or exotic animal skin. It traces some animal products to the first stage of production"
     },
-    "position": 1
+    "position": 2
   },
   {
     "name": "Patagonia",
@@ -27,7 +27,7 @@
       "people": " Some of its supply chain is certified by FLA Workplace Code of Conduct and Fair Trade USA in the final stage of production. It received a score of 51-60% in the Fashion Transparency Index. It likely publishes detailed information about its supplier policies, audits and remediation processes. It publishes a detailed list of suppliers in the final stage of production and some information about the findings of supplier audits. It publishes some information about forced labour, gender equality or freedom of association. It has a project to improve wages in its supply chain but there is no evidence it ensures payment of a living wage in most of its supply chain. It discloses policies to protect suppliers in its supply chain from the impacts of COVID-19 but not workers. ",
       "animals": " It has a general statement about minimising animal suffering but not a formal animal welfare policy. It uses leather and exotic animal hair. It states that it sources wool from non-mulesed sheep. It uses down accredited by the Responsible Down Standard. It does not use angora, fur or exotic animal skin. It traces most animal products to the first stage of production"
     },
-    "position": 2
+    "position": 3
   },
   {
     "name": "Nike",
@@ -42,7 +42,7 @@
       "people": " Some of its supply chain is certified by FLA Workplace Code of Conduct including all of the final stage of production. It received a score of 51-60% in the Fashion Transparency Index. It likely publishes detailed information about its supplier policies, audits and remediation processes. It publishes a detailed list of suppliers in the final stage of production and some information about the findings of supplier audits. It publishes some information about forced labour, gender equality or freedom of association. There is no evidence it ensures payment of a living wage in most of its supply chain. It discloses policies to protect suppliers in its supply chain from the impacts of COVID-19 but not workers",
       "animals": " It has a general statement about minimising animal suffering but not a formal animal welfare policy. It uses leather, wool and down. It does not use fur, exotic animal skin, exotic animal hair or angora. There is no evidence it traces any animal product to the first stage of production"
     },
-    "position": 3
+    "position": 4
   },
   {
     "name": "Zara",
@@ -57,6 +57,36 @@
       "people": " Half of its final stage of production is undertaken in Spain, a medium risk country for labour abuse. It received a score of 51-60% in the Fashion Transparency Index. It likely publishes detailed information about its supplier policies, audits and remediation processes. It publishes a detailed list of suppliers in the final stage of production and some information about the findings of supplier audits. It publishes some information about forced labour, gender equality or freedom of association. There is no evidence it ensures payment of a living wage in its supply chain. It discloses some policies to protect suppliers and workers in its supply chain from the impacts of COVID-19",
       "animals": " It has a formal animal welfare policy aligned with Five Freedoms. It uses leather, down and exotic animal hair. It states that it sources wool from non-mulesed sheep. It does not use fur, angora or exotic animal skin. There is no evidence it traces any animal products to the first stage of production"
     },
-    "position": 4
+    "position": 5
+  },
+  {
+    "name": "tentree",
+    "rating": 4,
+    "subratings": {
+      "planet": "4",
+      "people": "3",
+      "animals": "4"
+    },
+    "description": {
+      "planet": " It uses a high proportion of eco-friendly materials including organic cotton. It uses renewable energy in its supply chain to reduce its climate impact. There is no evidence it minimises packaging. Its use of eco-friendly materials limits the amount of chemicals, water and wastewater used in production. ",
+      "people": " It has a Code of Conduct that covers all of the ILO Four Fundamental Freedoms principles. It sources its final stage of production from countries with extreme risk of labour abuse. It traces most of its supply chain including all of the final stage of production. There is no evidence it ensures payment of a living wage in its supply chain. It audits or visits some of its suppliers. ",
+      "animals": " It does not use any animal products but it does not state that it's vegan. "
+    },
+    "position": 6
+  },
+  {
+    "name": "The North Face",
+    "rating": 3,
+    "subratings": {
+      "planet": "3",
+      "people": "3",
+      "animals": "3"
+    },
+    "description": {
+      "planet": " It uses some eco-friendly materials including recycled materials. It has set an absolute target to reduce greenhouse gas emissions generated from its own operations and supply chain but there is no evidence it is on track to meet its target. It is certified Bluesign for 39% of its fabrics. There is no evidence it minimises packaging",
+      "people": " Some of its supply chain is certified by Bluesign. It received a score of 51-60% in the Fashion Transparency Index. It likely publishes detailed information about its supplier policies, audits and remediation processes. It publishes a detailed list of suppliers in the final stage of production and some information about the findings of supplier audits. It publishes some information about forced labour, gender equality or freedom of association. There is no evidence it ensures payment of a living wage in most of its supply chain. It discloses policies to protect suppliers in its supply chain from the impacts of COVID-19 but not workers",
+      "animals": " It has a formal animal welfare policy aligned with Five Freedoms. It uses leather. It states that it sources wool from non-mulesed sheep. It uses down accredited by the Responsible Down Standard. It does not use angora, fur, down or exotic animal skin. It traces some animal products to the first stage of production"
+    },
+    "position": 7
   }
 ]

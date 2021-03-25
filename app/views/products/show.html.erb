@@ -33,7 +33,7 @@
 
 
 
-<div class="product-card-wrapper" data-aos="fade-left">
+<div class="product-card-wrapper">
   <!--------------------------brand section------------------------------------>
   <%= render '/components/product-card' , title: 'Brand', field_icon:'brand_icon', rating: @product.brand.rating %>
   <!-- section to hide -->
@@ -144,9 +144,8 @@
 
    <div class="rating-leafs-container total">
     <!-- LOGIC IN PRODUCT METHOD -->
-    <%= render 'shared/leaf', rating: 4 %>
+    <%= render 'shared/leaf', rating: @product.suppliers_rating %>
   </div>
-
 
 
   <div class="rating-article-container">
