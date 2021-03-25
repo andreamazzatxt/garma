@@ -67,27 +67,28 @@ end
 patagonia = Brand.find_by(name: "Patagonia")
 picture = URI.open('https://res.cloudinary.com/djeuk9059/image/upload/v1616159085/patagonia_etmaqp.png')
 patagonia.photo.attach(io: picture, filename: 'brand-logo-patagonia.jpg', content_type: 'image/png')
-
+p 'patagonia pic ok '
 nike = Brand.find_by(name: "Nike")
 picture = URI.open('https://play-lh.googleusercontent.com/eLqKK4MkDoXXbD_F3A_2rs-othxTESxbocvyOGyhAmbNCydgnYKczItIY2-HLYJmhr6Q')
 nike.photo.attach(io: picture, filename: 'brand-logo-nike.jpg', content_type: 'image/webp')
-
+p 'nike pic ok '
 hm = Brand.find_by(name: "HM")
 picture = URI.open('https://res.cloudinary.com/djeuk9059/image/upload/v1616159123/hm_enoekn.png')
 hm.photo.attach(io: picture, filename: 'brand-logo-hm.jpg', content_type: 'image/webp')
-
+p 'hm pic ok '
 zara = Brand.find_by(name: "Zara")
 picture = URI.open('https://play-lh.googleusercontent.com/Etar8ijdCl_bYMpgCEnHlS505Dkgh-BmUJjmQCSlzyv-8o8Acp7BFxfFiGtju1DTMuqT')
 zara.photo.attach(io: picture, filename: 'brand-logo-zara.jpg', content_type: 'image/webp')
+p 'zara pic ok '
 
 tentree = Brand.find_by(name: "tentree")
-picture = URI.open('https://cdn.shopify.com/s/files/1/2341/3995/files/tt-logo--top-simple_2x_c58d381e-fd8f-4318-b46c-cc6b80672e4c.png?v=1605747862')
-tentree.photo.attach(io: picture, filename: 'brand-logo-tentree.png', content_type: 'image/webp')
-
+tentree_pic = URI.open('https://trees.org/app/uploads/2015/11/tentree-v-black-transparent.png')
+tentree.photo.attach(io: tentree_pic, filename: 'brand-logo-tentree.png', content_type: 'image/png')
+p 'tentree pic ok '
 north = Brand.find_by(name: "The North Face")
-picture = URI.open('https://is5-ssl.mzstatic.com/image/thumb/Purple114/v4/2b/2f/3c/2b2f3c0a-49f6-3a77-c8e1-bc593f583e0c/source/512x512bb.jpg')
-tentree.photo.attach(io: picture, filename: 'north.jpg', content_type: 'image/webp')
-
+north_pic = URI.open('https://is5-ssl.mzstatic.com/image/thumb/Purple114/v4/2b/2f/3c/2b2f3c0a-49f6-3a77-c8e1-bc593f583e0c/source/512x512bb.jpg')
+north.photo.attach(io: north_pic, filename: 'north.jpg', content_type: 'image/webp')
+p 'north pic ok '
 puts 'Brands seed done! 💪'
 
 # HM PRODUCT INSTANCES
@@ -226,8 +227,42 @@ end
 
 p "PATAGONIA COMPLETE"
 
-north_products = JSON.parse(open('db/scraped_data/north_face_items.json').read)
+north_products = JSON.parse(open('db/scraped_data/nike_items.json').read)
 north_products.each do |product|
+  p product
+  instance = Product.create!(
+            name: product["name"],
+            category: product["article_type"],
+            article_number: product["article_number"],
+            department: product["department"],
+            photo_url: product["img"],
+            brand: Brand.where(name: "The North Face").take
+            )
+
+  product["composition"].each do |material|
+    fabric = Fabric.where(name: material["fiber"].downcase).take
+    UsedMaterial.create!(
+                percentage: material["percentage"],
+                fabric: fabric,
+                product: instance
+                )
+  end
+  if product["suppliers"] && product["suppliers"]["exist?"]
+      product["suppliers"]["list"].each do |supplier|
+        current = Supplier.create!(
+          name: supplier["name"],
+          country: supplier["country"],
+          address: supplier["address"]
+        )
+      ProductSupplier.create!(supplier: current, product: instance)
+      end
+    end
+end
+
+p "NIKE COMPLETE"
+
+nike_products = JSON.parse(open('db/scraped_data/north_face_items.json').read)
+nike_products.each do |product|
   p product
   instance = Product.create!(
             name: product["name"],
