@@ -4,17 +4,19 @@
 .container {
   height: 100vh;
   width: 100vw;
-  background-color: #6AE29C;
-  background: linear-gradient(180deg, #6AE29C 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #4EC5EF 0%, rgba(78, 197, 239, 0) 100%);  background-repeat: no-repeat;
+  background: linear-gradient(270deg, #6AE29C 53%,#4EC5EF 100%);
   background-attachment: fixed;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   justify-content: space-between;
   padding-top: 150px;
   color: #ffff;
   font-size: 20px;
   letter-spacing: 1.5px;
+}
+.logo-p{
+  font-size:smaller;
 }
 
 .home-button {
@@ -43,7 +45,7 @@
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
 }
 .footer-section1 {
   display: flex;
@@ -56,7 +58,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 100px;
+  padding-bottom: 170px;
 }
 
 .logo {
