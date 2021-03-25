@@ -23,6 +23,7 @@ class BrandsController < ApplicationController
     brand_id = params["id"]
     barcode = params["barcode"]["text"]
     product = Product.find_by(brand: brand_id, article_number: barcode)
+    raise
     if product.nil?
       render json: { url: nil }
     else
