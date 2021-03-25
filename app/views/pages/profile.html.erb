@@ -66,12 +66,12 @@
 
   <div class="buttons-container">
 
-    <%= link_to about_path, class:'profile-button' do %>
-    <%= render 'components/profile_button', text:'About Us' %>
+    <%= link_to root_path, class:'profile-button' do %>
+    <%= render 'components/profile_button', text:'Home' %>
     <% end %>
 
     <%= link_to about_path, class:'profile-button' do %>
-    <%= render 'components/profile_button', text:'contact us' %>
+    <%= render 'components/profile_button', text:'About Us' %>
     <% end %>
 
     <% if user_signed_in? %>
