@@ -94,7 +94,7 @@ puts 'Brands seed done! 💪'
 # HM PRODUCT INSTANCES
 hm_products = JSON.parse(open('db/scraped_data/hm_items.json').read)
 
-hm_products.each do |product|
+hm_products[0..200].each do |product|
   instance = Product.create!(
             name: product["name"],
             category: product["article_type"],
@@ -128,7 +128,7 @@ end
 puts " HM DONE! "
 zara_products = JSON.parse(open('db/scraped_data/zara_items.json').read)
 
-zara_products.each do |product|
+zara_products[0..200].each do |product|
   instance = Product.create!(
             name: product["name"],
             category: product["article_type"],
@@ -164,7 +164,6 @@ p "ZARA COMPLETE"
 tentree_products = JSON.parse(open('db/scraped_data/tentree_items.json').read)
 
 tentree_products.each do |product|
-  p product
   instance = Product.create!(
             name: product["name"],
             category: product["article_type"],
@@ -195,7 +194,6 @@ p "TENTREE COMPLETE"
 patagonia_products = JSON.parse(open('db/scraped_data/patagonia_items.json').read)
 
 patagonia_products.each do |product|
-  p product
   instance = Product.create!(
             name: product["name"],
             category: product["article_type"],
@@ -229,7 +227,6 @@ p "PATAGONIA COMPLETE"
 
 north_products = JSON.parse(open('db/scraped_data/north_face_items.json').read)
 north_products.each do |product|
-  p product
   instance = Product.create!(
             name: product["name"],
             category: product["article_type"],
@@ -263,7 +260,6 @@ p "NIKE COMPLETE"
 
 nike_products = JSON.parse(open('db/scraped_data/nike_items.json').read)
 nike_products.each do |product|
-  p product
   instance = Product.create!(
             name: product["name"],
             category: product["article_type"],
