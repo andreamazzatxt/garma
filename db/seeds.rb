@@ -6,6 +6,7 @@ User.destroy_all
 Product.destroy_all
 Fabric.destroy_all
 Brand.destroy_all
+Supplier.destroy_all
 
 
 olivia = User.new(
