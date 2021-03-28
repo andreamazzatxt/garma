@@ -1,1 +1,3 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Garma App, make your shopping habts more sustainable!
+
+Scan your favorite items and get all the insights about sustainability 
