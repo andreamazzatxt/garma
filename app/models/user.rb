@@ -5,6 +5,8 @@ class User < ApplicationRecord
   has_many :products, through: :garderobe_items
   validates :first_name, :last_name, :birthday, :gender, :password, presence: true
   has_one_attached :photo
+  has_many :authentication_tokens
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+         :recoverable, :rememberable, :validatable,
+         :token_authenticatable
 end

@@ -41,5 +41,22 @@ class BrandsController < ApplicationController
       redirect_to product_path(product)
     end
   end
+
+ #API ACTIONS
+  def api_brands
+    # /brands/api_brands
+    brands = Brand.all
+    render json: { brands: brands}
+  end
+
+  def api_by_name
+    #/brands/api_by_name?query=
+    if params[:query].present?
+      brands = Brand.search_by_brand_name(params[:query])
+    else
+      brands = Brand.all
+    end
+    render json: {brands: brands}
+  end
 end
 
