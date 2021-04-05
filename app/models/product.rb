@@ -23,6 +23,15 @@ class Product < ApplicationRecord
     return ((brand.rating + fabrics_rating + suppliers_rating) / 3).round
   end
 
+  def ratings_hash
+    {
+      supplier: suppliers_rating,
+      fabrics: fabrics_rating,
+      brand: brand.rating,
+      total: total_rating
+    }
+  end
+
   def garderobe_id(user)
     item = GarderobeItem.find_by(user: user, product: self)
     item.nil? ? 'false' : item.id

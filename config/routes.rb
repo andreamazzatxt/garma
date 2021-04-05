@@ -6,7 +6,15 @@ Rails.application.routes.draw do
   end
   get 'brands/api_all'
   get 'brands/api_by_name'
+  get 'brands/api_search_barcode'
   get 'products/api_by_id'
+  get 'products/api_is_favorite'
+  get 'users/api_info'
+  post 'users/api_update'
+  get 'users/api_garderobe'
+  get 'users/api_karma'
+  delete 'garderobe_items/api_delete_product'
+  get 'garderobe_items/api_save_product'
   ##########################
   get 'user/new'
   get 'product/show'

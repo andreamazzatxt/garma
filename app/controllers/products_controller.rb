@@ -18,14 +18,24 @@ class ProductsController < ApplicationController
   end
 
   # API ACTIONS
-  
+
   def api_by_id
-    product = Product.find(params[:id])
+    product = Product.includes(:suppliers, :used_materials).find_by(id: params[:id])
     if product
-      render json: { product: product}
+      ratings = product.ratings_hash
+      render json: { product: product, 
+                     suppliers: product.suppliers,
+                     brand: product.brand,
+                     compositions: product.used_materials,
+                     ratings: ratings}
     else
-      render json: { product: nil}
+      render json: { product: nil, error: 'Not Found'}, status: 404
     end
+  end
+
+  def api_is_favorite
+    @product = Product.find_by(id: params[:id ])
+    render json: { saved: saved?}
   end
 
   private
