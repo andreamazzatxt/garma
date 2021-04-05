@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
   get 'brands/api_all'
   get 'brands/api_by_name'
+  get 'products/api_by_id'
   ##########################
   get 'user/new'
   get 'product/show'

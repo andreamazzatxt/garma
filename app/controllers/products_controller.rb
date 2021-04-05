@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   before_action :find_product, only: [:show]
-  skip_before_action :authenticate_user!, only: [:show]
+  skip_before_action :authenticate_user!, only: [:show, :api_by_id]
 
   def show
     @saved = saved?
@@ -15,6 +15,17 @@ class ProductsController < ApplicationController
     @karma = 'medium' if total_rating == 3
     @karma = 'good' if total_rating == 4 || total_rating == 5
     @karma = 'neutral' if total_rating.zero?
+  end
+
+  # API ACTIONS
+  
+  def api_by_id
+    product = Product.find(params[:id])
+    if product
+      render json: { product: product}
+    else
+      render json: { product: nil}
+    end
   end
 
   private
