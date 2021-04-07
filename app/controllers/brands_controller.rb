@@ -41,5 +41,31 @@ class BrandsController < ApplicationController
       redirect_to product_path(product)
     end
   end
+
+ #API ACTIONS
+  def api_all
+    brands = Brand.all
+    render json: { brands: brands}
+  end
+
+  def api_by_name
+    if params[:query].present?
+      brands = Brand.search_by_brand_name(params[:query])
+    else
+      brands = Brand.all
+    end
+    render json: {brands: brands}
+  end
+
+  def api_search_barcode
+    brand_id = params[:brand_id]
+    barcode = params[:barcode]
+    product = Product.find_by(brand: brand_id, article_number: barcode)
+    if product
+      render json: {product: product}
+    else
+      render json: {product: nil, error: 'Product not Found'}, status: 404
+    end
+  end
 end
 

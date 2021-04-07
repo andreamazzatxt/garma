@@ -1,4 +1,21 @@
 Rails.application.routes.draw do
+  #API ROUTES
+  devise_scope :user do
+    post 'api/v1/login', to: 'user/sessions#create'
+    delete 'api/v1/logout', to: 'user/sessions#destroy'
+  end
+  get 'brands/api_all'
+  get 'brands/api_by_name'
+  get 'brands/api_search_barcode'
+  get 'products/api_by_id'
+  get 'products/api_is_favorite'
+  get 'users/api_info'
+  post 'users/api_update'
+  get 'users/api_garderobe'
+  get 'users/api_karma'
+  delete 'garderobe_items/api_delete_product'
+  get 'garderobe_items/api_save_product'
+  ##########################
   get 'user/new'
   get 'product/show'
   get 'brands/index'
@@ -23,6 +40,7 @@ Rails.application.routes.draw do
 
   get 'profile', to: 'pages#profile'
   get 'about', to: 'pages#about'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
 
