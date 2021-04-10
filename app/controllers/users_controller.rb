@@ -17,7 +17,7 @@ class UsersController < ApplicationController
 
   def api_info
     if current_user
-      render json: current_user
+      render json: parse_user(current_user)
     else
       render json: { error: 'User not logged in' }, status: 401
     end
@@ -61,5 +61,17 @@ class UsersController < ApplicationController
 
   def find_user
     @user = User.find(params[:id])
+  end
+
+  def parse_user(user)
+    {
+      name: {
+        first: user.first_name,
+        last: user.last_name,
+      },
+      gender: user.gender,
+      birthday: user.birthday,
+      photo: user.photo.url
+    }
   end
 end

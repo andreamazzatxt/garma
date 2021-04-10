@@ -45,7 +45,8 @@ class BrandsController < ApplicationController
  #API ACTIONS
   def api_all
     brands = Brand.all
-    render json: { brands: brands}
+    brands = parse_brands(brands)
+    render json: { brands: brands }
   end
 
   def api_by_name
@@ -54,6 +55,7 @@ class BrandsController < ApplicationController
     else
       brands = Brand.all
     end
+    brands = parse_brands(brands)
     render json: {brands: brands}
   end
 
@@ -65,6 +67,29 @@ class BrandsController < ApplicationController
       render json: {product: product}
     else
       render json: {product: nil, error: 'Product not Found'}, status: 404
+    end
+  end
+
+  private
+
+  def parse_brands(brands)
+    brands.map do |brand|
+      {
+        id: brand.id,
+        name: brand.name,
+        ratings: {
+          total: brand.rating,
+          planet: brand.planet_rating,
+          people: brand.people_rating,
+          animals: brand.animals_rating
+        },
+        descriptions: {
+          planet: brand.planet_description,
+          people: brand.people_description,
+          animals: brand.animals_description,
+        },
+        photo: brand.photo.url
+      }
     end
   end
 end
