@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   get 'users/api_garderobe'
   get 'users/api_karma'
   delete 'garderobe_items/api_delete_product'
-  get 'garderobe_items/api_save_product'
+  post 'garderobe_items/api_save_product'
   ##########################
   get 'user/new'
   get 'product/show'
