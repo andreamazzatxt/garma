@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'brands/api_by_name'
   get 'brands/api_search_barcode'
   get 'products/api_by_id'
-  get 'products/api_is_favorite'
+  post 'products/api_is_favorite'
   get 'users/api_info'
   post 'users/api_update'
   get 'users/api_garderobe'
