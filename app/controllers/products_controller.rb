@@ -26,7 +26,7 @@ class ProductsController < ApplicationController
       render json: { product: product, 
                      suppliers: product.suppliers,
                      brand: product.brand,
-                     compositions: product.used_materials,
+                     compositions: product.composition_array,
                      ratings: ratings}
     else
       render json: { product: nil, error: 'Not Found'}, status: 404

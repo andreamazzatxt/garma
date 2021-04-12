@@ -32,6 +32,10 @@ class Product < ApplicationRecord
     }
   end
 
+  def composition_array
+    used_materials.map { |material| material.composition_hash}
+  end
+
   def garderobe_id(user)
     item = GarderobeItem.find_by(user: user, product: self)
     item.nil? ? 'false' : item.id
