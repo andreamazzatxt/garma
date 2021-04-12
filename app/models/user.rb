@@ -19,4 +19,17 @@ class User < ApplicationRecord
     karma = 'neutral' if total_rating.zero?
     return karma
   end
+
+  def products_hash
+    products.map do |product|
+      {
+        name: product.name,
+        brand: product.brand.name,
+        rating: product.total_rating,
+        photo: product.photo_url,
+        category: product.category,
+        department: product.department
+      }
+    end
+  end
 end

@@ -39,7 +39,7 @@ class UsersController < ApplicationController
 
   def api_garderobe
     if current_user
-      render json: current_user.products
+      render json: current_user.products_hash
     else
       render json: ['User not logged in'], status: 401
     end
